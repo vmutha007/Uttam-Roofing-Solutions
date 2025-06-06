@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uttam Roofing Solutions - Your Home's Happy Hat!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Updated Google Fonts to include Montserrat and Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif; /* Default body font */
+            overflow-x: hidden;
+            background-color: #111827; /* gray-900 */
+            color: #F3F4F6; /* gray-100 */
+        }
+        /* Main heading and title font */
+        .font-montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #1E3A8A 0%, #7B1FA2 100%); /* blue-800 to dark purple */
+        }
+
+        /* Main Title specific styling */
+        .main-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700; /* Bold */
+        }
+        /* Tagline specific styling */
+        .tagline {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400; /* Regular */
+            font-style: italic;
+        }
+
+        .section-title {
+            @apply text-4xl md:text-5xl text-center mb-12 relative;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700; /* Bold */
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 5px;
+            background-color: #F59E0B; /* Amber-500 */
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+        .product-card {
+            @apply bg-gray-800 rounded-xl shadow-2xl p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-yellow-500/50;
+            border: 2px solid transparent;
+        }
+        .product-card:hover {
+            border-color: #F59E0B; /* Amber-500 border on hover */
+        }
+        .product-card h3 {
+            @apply text-yellow-400 text-2xl mb-2 text-center; /* Yellow for card titles */
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600; /* SemiBold */
+        }
+        .product-card p {
+            @apply text-gray-300 text-sm text-center; /* Lighter gray for card text, Nunito (body) */
+        }
+
+        .btn-call {
+            @apply text-lg px-8 py-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600; /* SemiBold for buttons */
+        }
+        .btn-uttam {
+            @apply bg-red-600 hover:bg-red-700;
+        }
+        .btn-rohit {
+            @apply bg-yellow-500 hover:bg-yellow-600 text-gray-900;
+        }
+
+        .wavy-divider {
+            width: 100%;
+            height: 100px;
+            overflow: hidden;
+            position: relative;
+            bottom: -1px;
+        }
+        .wavy-divider svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-bounce-slow {
+            animation: bounce-slow 3s infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        img, svg {
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    <!-- Header -->
+    <header class="w-full bg-gray-950 text-gray-100 py-3 shadow-lg z-50">
+  <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center px-6 gap-2">
+    <div class="font-montserrat font-bold text-lg tracking-wide">
+      Uttam Roofing Solutions
+    </div>
+    <div class="flex gap-4">
+      <a href="tel:+918308443333"
+         class="btn-call btn-uttam inline-flex items-center gap-2 text-xl px-6 py-3 rounded-full shadow-xl hover:scale-110 hover:shadow-red-400/60 transition-transform duration-200 font-montserrat font-bold"
+         style="letter-spacing: 1px;">
+        <span class="text-2xl">🤙</span> Uttam Mutha
+      </a>
+      <a href="tel:+919765633344"
+         class="btn-call btn-rohit inline-flex items-center gap-2 text-xl px-6 py-3 rounded-full shadow-xl hover:scale-110 hover:shadow-yellow-400/60 transition-transform duration-200 font-montserrat font-bold"
+         style="letter-spacing: 1px;">
+        <span class="text-2xl">📞</span> Rohit Mutha
+      </a>
+    </div>
+  </div>
+</header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white pt-20 pb-10 relative">
+        <div class="container mx-auto px-6 text-center">
+            <!-- Roof Mascot SVG -->
+            <svg class="mx-auto mb-6 h-32 w-auto animate-bounce-slow text-yellow-400" viewBox="0 0 100 70" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 20 Q 5 0, 10 20 L 40 20 Q 50 0, 60 20 L 90 20 Q 95 0, 100 20 L 100 70 L 0 70 Z" fill="#FBBF24"/>
+                <path d="M2 35 H38 M42 35 H58 M62 35 H98" stroke="#F59E0B" stroke-width="1.5" fill="none" />
+                <path d="M2 45 H38 M42 45 H58 M62 45 H98" stroke="#F59E0B" stroke-width="1.5" fill="none" />
+                <path d="M2 55 H38 M42 55 H58 M62 55 H98" stroke="#F59E0B" stroke-width="1.5" fill="none" />
+                <path d="M2 65 H38 M42 65 H58 M62 65 H98" stroke="#F59E0B" stroke-width="1.5" fill="none" />
+                <path d="M3 20 Q 7.5 7, 12 20 L 38 20 Q 43 7, 48 20 L 52 20 Q 57 7, 62 20 L 88 20 Q 93 7, 97 20"
+                      stroke="#B91C1C" stroke-width="2.5" fill="none" />
+                <circle cx="35" cy="35" r="7" fill="white"/>
+                <circle cx="33" cy="37" r="3" fill="#1E293B"/>
+                <circle cx="65" cy="35" r="7" fill="white"/>
+                <circle cx="63" cy="37" r="3" fill="#1E293B"/>
+                <path d="M40 50 Q 50 58, 60 50" stroke="#1E293B" stroke-width="2.5" fill="transparent"/>
+                <rect x="75" y="5" width="15" height="25" fill="#DC2626" rx="3"/>
+                <rect x="77" y="2" width="11" height="5" fill="#B91C1C" rx="1"/>
+            </svg>
+
+            <!-- Main Title with Montserrat Bold -->
+            <h1 class="main-title text-5xl md:text-7xl mb-4 text-white">Uttam Roofing Solutions</h1>
+            <!-- Tagline with Montserrat Regular Italic -->
+            <p class="tagline text-3xl md:text-4xl mb-12 text-yellow-300">Your Home's Happy Hat!</p>
+        </div>
+        <div class="wavy-divider">
+            <svg viewBox="0 0 1440 100" fill="#1F2937" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0 50 C150 100 300 0 450 50 C600 100 750 0 900 50 C1050 100 1200 0 1350 50 C1400 66.66 1440 100 1440 100 L1440 100 L0 100 Z"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Who We Are Section -->
+    <section class="py-16 md:py-24 bg-gray-800 text-gray-200">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="section-title no-underline text-yellow-400 text-5xl md:text-6xl mb-12">Who We Are?</h2>
+            <div class="max-w-3xl mx-auto text-lg md:text-xl space-y-6">
+                <p>Hey there! We're <span class="font-montserrat font-bold text-red-500">Uttam Roofing Solutions</span>, your friendly partners in making your roof the star of the neighborhood (for all the right reasons!).</p>
+                <p>We believe a top-notch roof isn't just about keeping the rain out; it's about adding <strong class="font-montserrat font-semibold text-blue-400">personality, protection, and peace of mind</strong> to your beloved home or project. We're passionate about providing quality roofing that looks fantastic and lasts for ages!</p>
+                <svg class="mx-auto h-16 w-16 text-blue-400 animate-float" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h7.5" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Awesome Products Section -->
+    <section class="py-16 md:py-24 bg-gray-900 text-gray-200">
+         <div class="wavy-divider" style="transform: rotate(180deg); position:relative; top:-1px; bottom:auto;">
+            <svg viewBox="0 0 1440 100" fill="#1F2937" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0 50 C150 100 300 0 450 50 C600 100 750 0 900 50 C1050 100 1200 0 1350 50 C1400 66.66 1440 100 1440 100 L1440 100 L0 100 Z"/>
+            </svg>
+        </div>
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-blue-400">Our Awesome Products!</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Product 1: Polycarbonate Sheet -->
+                <a href="polycarbonate.html" class="product-card cursor-pointer hover:shadow-blue-400/60">
+                    <div class="text-yellow-400 mb-4 text-center">
+                        <svg class="mx-auto h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+                    </div>
+                    <h3>Polycarbonate Sheet</h3>
+                    <p>Crystal clear, strong, and versatile sheets for roofing and more.</p>
+                </a>
+                <!-- Product 2: Mild Steel Pipe -->
+                <a href="mildsteel.html" class="product-card cursor-pointer hover:shadow-blue-400/60">
+                    <div class="text-gray-400 mb-4 text-center">
+                        <svg class="mx-auto h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10" stroke-width="2"/><rect x="8" y="8" width="8" height="8" stroke-width="2"/></svg>
+                    </div>
+                    <h3>Mild Steel Pipe</h3>
+                    <p>Strong pipes for structural support and construction needs.</p>
+                </a>
+                <!-- Product 3: Alabaster Sheet -->
+                <a href="alabaster.html" class="product-card cursor-pointer hover:shadow-blue-400/60">
+                    <div class="text-red-400 mb-4 text-center">
+                        <svg class="mx-auto h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="4" y="4" width="16" height="16" rx="4" stroke-width="2"/></svg>
+                    </div>
+                    <h3>Alabaster Sheet</h3>
+                    <p>Elegant sheets for interiors and decorative applications.</p>
+                </a>
+                <!-- Product 4: Gutter System -->
+                <a href="gutter.html" class="product-card cursor-pointer hover:shadow-blue-400/60">
+                    <div class="text-blue-400 mb-4 text-center">
+                        <svg class="mx-auto h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6h18M3 10h18M3 14h18M3 18h18"/></svg>
+                    </div>
+                    <h3>Gutter System</h3>
+                    <p>Efficient water management for your roof and building.</p>
+                </a>
+                <!-- Product 5: Roofing Sheet -->
+                <a href="roofing.html" class="product-card cursor-pointer hover:shadow-blue-400/60">
+                    <div class="text-yellow-400 mb-4 text-center">
+                        <svg class="mx-auto h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="7" width="18" height="10" rx="2" stroke-width="2"/></svg>
+                    </div>
+                    <h3>Roofing Sheet</h3>
+                    <p>Colorful, durable sheets for all types of roofing projects.</p>
+                </a>
+                <!-- Product 6: Acrylic Sheet -->
+                <a href="acrylic.html" class="product-card cursor-pointer hover:shadow-blue-400/60">
+                    <div class="text-pink-400 mb-4 text-center">
+                        <svg class="mx-auto h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="5" y="5" width="14" height="14" rx="2" stroke-width="2"/></svg>
+                    </div>
+                    <h3>Acrylic Sheet</h3>
+                    <p>Modern, stylish sheets for interiors and creative uses.</p>
+                </a>
+                <!-- Product 7: Self Tapping Screw -->
+                <a href="screw.html" class="product-card cursor-pointer hover:shadow-blue-400/60">
+                    <div class="text-gray-400 mb-4 text-center">
+                        <svg class="mx-auto h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v20m0 0l4-4m-4 4l-4-4"/></svg>
+                    </div>
+                    <h3>Self Tapping Screw</h3>
+                    <p>Essential fasteners for secure and easy installations.</p>
+                </a>
+            </div>
+            <p class="text-center mt-12 text-gray-300 text-lg">And many more roofing wonders! Just ask us.</p>
+        </div>
+        <div class="wavy-divider" style="position:relative; bottom:-1px;">
+            <svg viewBox="0 0 1440 100" fill="#B91C1C" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0 50 C150 100 300 0 450 50 C600 100 750 0 900 50 C1050 100 1200 0 1350 50 C1400 66.66 1440 100 1440 100 L1440 100 L0 100 Z"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Why We Rock Section -->
+    <section class="py-16 md:py-24 bg-red-700 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-white" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Why We Rock!</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                <div class="bg-gray-800/70 backdrop-blur-sm p-6 rounded-lg shadow-lg animate-float" style="animation-delay: 0.1s;">
+                    <svg class="h-12 w-12 text-yellow-400 mx-auto mb-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <h3 class="font-montserrat font-semibold text-xl text-yellow-300 mb-2">Durable & Delightful</h3>
+                    <p class="text-gray-200 text-sm">Our roofs are built tough to last and designed to look absolutely fantastic!</p>
+                </div>
+                <div class="bg-gray-800/70 backdrop-blur-sm p-6 rounded-lg shadow-lg animate-float" style="animation-delay: 0.2s;">
+                    <svg class="h-12 w-12 text-blue-400 mx-auto mb-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-6.364-.386l1.591-1.591M3 12h2.25m.386-6.364l1.591 1.591" />
+                    </svg>
+                    <h3 class="font-montserrat font-semibold text-xl text-blue-300 mb-2">Weather Warriors</h3>
+                    <p class="text-gray-200 text-sm">Sun, rain, or shine, our roofing solutions have got your home covered and protected.</p>
+                </div>
+                <div class="bg-gray-800/70 backdrop-blur-sm p-6 rounded-lg shadow-lg animate-float" style="animation-delay: 0.3s;">
+                     <svg class="h-12 w-12 text-yellow-400 mx-auto mb-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                    </svg>
+                    <h3 class="font-montserrat font-semibold text-xl text-yellow-300 mb-2">Expert Advice</h3>
+                    <p class="text-gray-200 text-sm">We're not just sellers, we're your roofing buddies! Ready to help you pick the perfect match.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get in Touch Section -->
+    <section class="py-16 md:py-24 bg-gray-800 text-gray-200">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="section-title text-yellow-400">Get in Touch!</h2>
+            <p class="max-w-2xl mx-auto text-lg md:text-xl mb-10 text-gray-300">
+                Ready for a Roof-tastic Makeover or have some questions? <br> Don't be shy, give us a buzz!
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-6 mb-12">
+                <a href="tel:+918308443333" class="btn-call btn-uttam inline-flex items-center gap-2 text-xl shadow-2xl hover:shadow-red-400/60">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 -ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a2 2 0 011.94 1.515l1.12 4.485a2 2 0 01-.45 1.885l-2.1 2.1a16.001 16.001 0 006.586 6.586l2.1-2.1a2 2 0 011.885-.45l4.485 1.12A2 2 0 0121 18.72V22a2 2 0 01-2 2h-1C9.163 24 0 14.837 0 4V3a2 2 0 012-2h1z" />
+                    </svg>
+                    Call Uttam
+                </a>
+                <a href="tel:+919765633344" class="btn-call btn-rohit inline-flex items-center gap-2 text-xl shadow-2xl hover:shadow-yellow-400/60">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 -ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a2 2 0 011.94 1.515l1.12 4.485a2 2 0 01-.45 1.885l-2.1 2.1a16.001 16.001 0 006.586 6.586l2.1-2.1a2 2 0 011.885-.45l4.485 1.12A2 2 0 0121 18.72V22a2 2 0 01-2 2h-1C9.163 24 0 14.837 0 4V3a2 2 0 012-2h1z" />
+                    </svg>
+                    Call Rohit
+                </a>
+            </div>
+
+            <div class="text-gray-400 mt-10">
+                <h4 class="font-montserrat font-semibold text-2xl text-blue-400 mb-2">Find Us Here:</h4>
+                <p class="text-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 inline-block mr-1 align-text-bottom text-red-500">
+                      <path fill-rule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.145l.005-.002.007-.004.012-.007a7.496 7.496 0 00.272-.165l.006-.004.006-.004.016-.01a7.492 7.492 0 00.258-.170l.004-.003.004-.002.01-.007a10.013 10.013 0 001.685-1.452l.002-.002.002-.002.003-.003.003-.003.002-.002a15.004 15.004 0 001.81-2.07A14.95 14.95 0 0016 11.477V8c0-1.473-.421-2.837-1.178-3.977A6.012 6.012 0 0010.02 2a5.985 5.985 0 00-4.795 2.023A6.01 6.01 0 004 8v3.477c0 .923.269 1.81.767 2.621l.003.004.002.003.002.002.003.003.002.002.003.003.002.002.002.002a10.013 10.013 0 001.685 1.452l.01.007.004.002.004.003a7.492 7.492 0 00.258.17l.016.01.006.004.006.004a7.496 7.496 0 00.272-.165l.012.007.007.004.005.002a5.741 5.741 0 00.281.145l.018.008.006.003c.001 0 .002.001.003.001zM10 12a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                </svg>
+                    No. 269, Near Sant Lilaram School, Kasarwadi, Pune - 411034, Maharashtra, India
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-300 text-center py-8">
+        <p class="font-nunito">&copy; <span id="currentYear"></span> Uttam Roofing Solutions. All Rights Reserved.</p>
+        <p class="text-sm mt-1">Let's make your roof the best on the block!</p>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const observerOptions = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                } else {
+                    entry.target.classList.remove('opacity-100', 'translate-y-0');
+                    entry.target.classList.add('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.product-card, .bg-gray-800\\/70').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700', 'ease-out');
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>

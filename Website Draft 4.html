@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uttam Roofing Solutions - Durable & Innovative Roofing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff; /* Completely white background */
+            color: #262626; /* Near-black for premium look */
+        }
+        .hero-bg {
+            background-color: #f0f0f0; /* Very light grey for a subtle background, no graphic image */
+        }
+        .tab-active {
+            border-color: #0ea5e9; /* sky-500 */
+            background-color: #0ea5e9;
+            color: white;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .tab-inactive {
+            border-color: #e2e8f0; /* slate-200 */
+            background-color: #ffffff;
+            color: #475569; /* slate-600 */
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 50vh;
+        }
+        hr.thin-line {
+            border: 0;
+            height: 1px;
+            background-color: #e2e8f0; /* slate-200 for a thin line */
+            margin: 4rem auto; /* spacing above and below */
+            max-width: 1200px;
+        }
+
+        /* Styles for the 3D Model Viewer */
+        .hero-3d-model {
+            width: 100%; /* Adjust width as needed */
+            height: 250px; /* Set a specific height */
+            max-width: 400px; /* Optional: limit max width */
+            margin: 20px auto 0; /* Center and add top margin */
+            display: block; /* Ensures margin auto works for centering */
+            background-color: transparent; /* Make background transparent */
+            --poster-color: transparent; /* Hides the default poster background */
+            overflow: hidden; /* Prevent model overflow if not perfectly sized */
+        }
+
+    </style>
+</head>
+<body class="text-neutral-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-neutral-900">
+                Uttam Roofing Solutions
+            </div>
+            <div class="hidden md:flex space-x-4 items-center">
+                <a href="tel:+918041014685" class="bg-black text-white px-4 py-2 rounded-full hover:bg-neutral-800 transition-all shadow">📞 Call Us</a>
+                <a href="https://wa.me/918041014685" target="_blank" class="bg-black text-white px-4 py-2 rounded-full hover:bg-neutral-800 transition-all shadow">💬 WhatsApp Enquiry</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+            <a href="tel:+918041014685" class="block mt-2 bg-black text-white text-center px-4 py-2 rounded-full hover:bg-neutral-800 shadow">📞 Call Us</a>
+            <a href="https://wa.me/918041014685" target="_blank" class="block mt-2 bg-black text-white text-center px-4 py-2 rounded-full hover:bg-neutral-800 shadow">💬 WhatsApp Enquiry</a>
+        </div>
+         <hr style="height: 5px; border: none; background-color: black;">
+    </header>
+
+    <main>
+       <div id="house3D">
+        <section id="hero" class="hero-bg text-neutral-900 h-[50vh] md:h-[70vh] flex items-center justify-center relative overflow-hidden">
+            <svg class="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <radialGradient id="roofGlow" cx="50%" cy="40%" r="70%" fx="50%" fy="40%">
+                        <stop offset="0%" stop-color="#fff" stop-opacity="0.7"/>
+                        <stop offset="80%" stop-color="#0ea5e9" stop-opacity="0.15"/>
+                        <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+                    </radialGradient>
+                    <linearGradient id="roofLine" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.7"/>
+                        <stop offset="100%" stop-color="#fff" stop-opacity="0.1"/>
+                    </linearGradient>
+                </defs>
+                <ellipse cx="400" cy="200" rx="320" ry="120" fill="url(#roofGlow)" filter="url(#blur1)">
+                    <animate attributeName="cx" values="400;1040;400" dur="12s" repeatCount="indefinite"/>
+                </ellipse>
+                <ellipse cx="1040" cy="400" rx="260" ry="100" fill="url(#roofGlow)" filter="url(#blur2)">
+                    <animate attributeName="cx" values="1040;400;1040" dur="14s" repeatCount="indefinite"/>
+                </ellipse>
+                <path d="M400 350 Q720 150 1040 350" stroke="url(#roofLine)" stroke-width="16" fill="none" filter="url(#blur3)">
+                    <animate attributeName="d" values="M400 350 Q720 150 1040 350;M400 370 Q720 120 1040 370;M400 350 Q720 150 1040 350" dur="8s" repeatCount="indefinite"/>
+                </path>
+                <filter id="blur1"><feGaussianBlur stdDeviation="60"/></filter>
+                <filter id="blur2"><feGaussianBlur stdDeviation="40"/></filter>
+                <filter id="blur3"><feGaussianBlur stdDeviation="2"/></filter>
+            </svg>
+            <div class="relative z-10 p-8 md:p-12 text-center flex flex-col items-center justify-center w-full">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4 flex flex-col items-center justify-center">
+                    <span>Building Homes Since 1980.</span>
+                    <span class="inline-flex items-center justify-center mt-2">
+                        <svg id="likeRoof" class="w-12 h-12 text-blue-500 animate-bounce" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 6 4 4 6.5 4c1.74 0 3.41 1.01 4.13 2.44h.74C14.09 5.01 15.76 4 17.5 4 20 4 22 6 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                        <span class="ml-2 text-2xl md:text-3xl font-bold text-blue-500 animate-pulse">Loved by 1000+ Roofs</span>
+                    </span>
+                    <span>Uttam Roofing Solutions</span>
+                </h1>
+                <p class="text-lg md:text-xl text-neutral-700 mb-8">Your trusted partner for durable and innovative roofing solutions in Satara.</p>
+                <a href="tel:+918041014685" class="bg-black text-white text-lg px-8 py-3 rounded-full hover:bg-neutral-800 transition-all shadow-lg transform hover:scale-105 mt-6 inline-block">Enquire Now!</a>
+            </div>
+          </div>
+        </section>
+<hr style="height: 5px; border: none; background-color: black;">
+        <!-- --- SHOP OUR BEST SELLERS SECTION (with horizontal scroll/arrow navigation) --- -->
+<section id="shop-products" class="py-10 md:py-12" style="background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%); margin-bottom:0;">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-neutral-900 mb-2 tracking-tight">Best Sellers</h2>
+      <p class="text-lg text-neutral-700">Browse our bestsellers and essentials. Click any product to view details below.</p>
+    </div>
+    <div class="relative">
+      <!-- Left Arrow -->
+      <button id="bestSellerLeft" class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-neutral-200 rounded-full shadow p-2 hover:bg-neutral-100 transition" aria-label="Scroll left">
+        <svg class="w-6 h-6 text-neutral-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+        </svg>
+      </button>
+      <!-- Horizontal Scrollable Cards -->
+      <div id="bestSellerScroll" class="flex overflow-x-auto gap-6 pb-2 scroll-smooth snap-x snap-mandatory">
+        <!-- Polycarbonate Sheets -->
+        <button onclick="document.getElementById('polycarbonate-sheets').scrollIntoView({behavior:'smooth'});" class="min-w-[320px] max-w-xs w-full rounded-2xl bg-white shadow-lg flex flex-col p-5 transition-all duration-300 group hover:shadow-2xl focus:outline-none snap-start" style="border-radius: 20px;">
+          <div class="flex items-center justify-between mb-2">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full border border-neutral-200 text-neutral-400 bg-white">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 17.25l-6.172 3.858 1.179-6.873L2 9.885l6.914-1.004L12 2.5l3.086 6.381L22 9.885l-5.007 4.35 1.179 6.873z"/>
+              </svg>
+            </span>
+            <div class="flex space-x-1">
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-blue-200 bg-blue-50 text-blue-600">BS</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-purple-200 bg-purple-50 text-purple-600">AC</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-pink-200 bg-pink-50 text-pink-600">NR</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center mb-3">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2024/11/464073875/MW/RE/TP/181055037/fluted-polycarbonate-sheet-500x500.jpg" alt="Polycarbonate Sheets" class="object-contain w-32 h-32 mb-2 rounded-xl shadow-sm">
+            <div class="flex space-x-2">
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">A+</span>
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">V</span>
+            </div>
+          </div>
+          <div class="flex-1 flex flex-col">
+            <span class="block text-base font-bold text-neutral-900 leading-tight mb-1">Polycarbonate Sheets, 5mm Thick, Clear</span>
+            <span class="flex items-center text-yellow-400 mb-1">
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-gray-200" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <span class="text-xs text-neutral-500 ml-1">(61)</span>
+            </span>
+            <span class="block text-xs text-neutral-400">Price</span>
+            <span class="block text-lg font-bold text-green-600 mb-1">₹4,000.00</span>
+          </div>
+        </button>
+        <!-- Mild Steel Pipes -->
+        <button onclick="document.getElementById('mild-steel-pipes').scrollIntoView({behavior:'smooth'});" class="min-w-[320px] max-w-xs w-full rounded-2xl bg-white shadow-lg flex flex-col p-5 transition-all duration-300 group hover:shadow-2xl focus:outline-none snap-start" style="border-radius: 20px;">
+          <div class="flex items-center justify-between mb-2">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full border border-neutral-200 text-neutral-400 bg-white">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 17.25l-6.172 3.858 1.179-6.873L2 9.885l6.914-1.004L12 2.5l3.086 6.381L22 9.885l-5.007 4.35 1.179 6.873z"/>
+              </svg>
+            </span>
+            <div class="flex space-x-1">
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-blue-200 bg-blue-50 text-blue-600">BS</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-purple-200 bg-purple-50 text-purple-600">AC</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-pink-200 bg-pink-50 text-pink-600">NR</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center mb-3">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2024/11/464019561/XN/TE/LR/181055037/apl-apollo-gp-pipes-500x500.jpg" alt="Mild Steel Pipes" class="object-contain w-32 h-32 mb-2 rounded-xl shadow-sm">
+            <div class="flex space-x-2">
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">A+</span>
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">V</span>
+            </div>
+          </div>
+          <div class="flex-1 flex flex-col">
+            <span class="block text-base font-bold text-neutral-900 leading-tight mb-1">Mild Steel Pipes, Color-Coated, GI</span>
+            <span class="flex items-center text-yellow-400 mb-1">
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-gray-200" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <span class="text-xs text-neutral-500 ml-1">(53)</span>
+            </span>
+            <span class="block text-xs text-neutral-400">Price</span>
+            <span class="block text-lg font-bold text-green-600 mb-1">₹350.00</span>
+          </div>
+        </button>
+        <!-- Acrylic Sheets -->
+        <button onclick="document.getElementById('acrylic-sheets').scrollIntoView({behavior:'smooth'});" class="min-w-[320px] max-w-xs w-full rounded-2xl bg-white shadow-lg flex flex-col p-5 transition-all duration-300 group hover:shadow-2xl focus:outline-none snap-start" style="border-radius: 20px;">
+          <div class="flex items-center justify-between mb-2">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full border border-neutral-200 text-neutral-400 bg-white">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 17.25l-6.172 3.858 1.179-6.873L2 9.885l6.914-1.004L12 2.5l3.086 6.381L22 9.885l-5.007 4.35 1.179 6.873z"/>
+              </svg>
+            </span>
+            <div class="flex space-x-1">
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-blue-200 bg-blue-50 text-blue-600">BS</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-purple-200 bg-purple-50 text-purple-600">AC</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-pink-200 bg-pink-50 text-pink-600">NR</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center mb-3">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2024/11/464073010/KN/JF/TS/181055037/acrylic-sheet-500x500.jpg" alt="Acrylic Sheets" class="object-contain w-32 h-32 mb-2 rounded-xl shadow-sm">
+            <div class="flex space-x-2">
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">A+</span>
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">V</span>
+            </div>
+          </div>
+          <div class="flex-1 flex flex-col">
+            <span class="block text-base font-bold text-neutral-900 leading-tight mb-1">Acrylic Sheets, Crystal Clear, 4mm</span>
+            <span class="flex items-center text-yellow-400 mb-1">
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-gray-200" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <span class="text-xs text-neutral-500 ml-1">(48)</span>
+            </span>
+            <span class="block text-xs text-neutral-400">Price</span>
+            <span class="block text-lg font-bold text-green-600 mb-1">₹3,200.00</span>
+          </div>
+        </button>
+        <!-- Mild Steel Structures -->
+        <button onclick="document.getElementById('mild-steel-structures').scrollIntoView({behavior:'smooth'});" class="min-w-[320px] max-w-xs w-full rounded-2xl bg-white shadow-lg flex flex-col p-5 transition-all duration-300 group hover:shadow-2xl focus:outline-none snap-start" style="border-radius: 20px;">
+          <div class="flex items-center justify-between mb-2">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full border border-neutral-200 text-neutral-400 bg-white">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 17.25l-6.172 3.858 1.179-6.873L2 9.885l6.914-1.004L12 2.5l3.086 6.381L22 9.885l-5.007 4.35 1.179 6.873z"/>
+              </svg>
+            </span>
+            <div class="flex space-x-1">
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-blue-200 bg-blue-50 text-blue-600">BS</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-purple-200 bg-purple-50 text-purple-600">AC</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-pink-200 bg-pink-50 text-pink-600">NR</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center mb-3">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2024/11/464072607/IN/WJ/MF/181055037/rectangular-apl-apollo-gp-pipe-500x500.jpg" alt="Mild Steel Structures" class="object-contain w-32 h-32 mb-2 rounded-xl shadow-sm">
+            <div class="flex space-x-2">
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">A+</span>
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">V</span>
+            </div>
+          </div>
+          <div class="flex-1 flex flex-col">
+            <span class="block text-base font-bold text-neutral-900 leading-tight mb-1">Mild Steel Structures, Custom Fabricated</span>
+            <span class="flex items-center text-yellow-400 mb-1">
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-gray-200" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <span class="text-xs text-neutral-500 ml-1">(22)</span>
+            </span>
+            <span class="block text-xs text-neutral-400">Price</span>
+            <span class="block text-lg font-bold text-green-600 mb-1">Custom</span>
+          </div>
+        </button>
+        <!-- Gutter Systems -->
+        <button onclick="document.getElementById('gutter-systems').scrollIntoView({behavior:'smooth'});" class="min-w-[320px] max-w-xs w-full rounded-2xl bg-white shadow-lg flex flex-col p-5 transition-all duration-300 group hover:shadow-2xl focus:outline-none snap-start" style="border-radius: 20px;">
+          <div class="flex items-center justify-between mb-2">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full border border-neutral-200 text-neutral-400 bg-white">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 17.25l-6.172 3.858 1.179-6.873L2 9.885l6.914-1.004L12 2.5l3.086 6.381L22 9.885l-5.007 4.35 1.179 6.873z"/>
+            </svg>
+            </span>
+            <div class="flex space-x-1">
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-blue-200 bg-blue-50 text-blue-600">BS</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-purple-200 bg-purple-50 text-purple-600">AC</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-pink-200 bg-pink-50 text-pink-600">NR</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center mb-3">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2022/10/ZX/ZW/GL/181055037/gutter-system-500x500.jpg" alt="Gutter Systems" class="object-contain w-32 h-32 mb-2 rounded-xl shadow-sm">
+            <div class="flex space-x-2">
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">A+</span>
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">V</span>
+            </div>
+          </div>
+          <div class="flex-1 flex flex-col">
+            <span class="block text-base font-bold text-neutral-900 leading-tight mb-1">Gutter Systems, UPVC, Half-Round</span>
+            <span class="flex items-center text-yellow-400 mb-1">
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-gray-200" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <span class="text-xs text-neutral-500 ml-1">(34)</span>
+            </span>
+            <span class="block text-xs text-neutral-400">Price</span>
+            <span class="block text-lg font-bold text-green-600 mb-1">₹250.00</span>
+          </div>
+        </button>
+        <!-- Accessories -->
+        <button onclick="document.getElementById('accessories').scrollIntoView({behavior:'smooth'});" class="min-w-[320px] max-w-xs w-full rounded-2xl bg-white shadow-lg flex flex-col p-5 transition-all duration-300 group hover:shadow-2xl focus:outline-none snap-start" style="border-radius: 20px;">
+          <div class="flex items-center justify-between mb-2">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full border border-neutral-200 text-neutral-400 bg-white">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 17.25l-6.172 3.858 1.179-6.873L2 9.885l6.914-1.004L12 2.5l3.086 6.381L22 9.885l-5.007 4.35 1.179 6.873z"/>
+              </svg>
+            </span>
+            <div class="flex space-x-1">
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-blue-200 bg-blue-50 text-blue-600">BS</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-purple-200 bg-purple-50 text-purple-600">AC</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-pink-200 bg-pink-50 text-pink-600">NR</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center mb-3">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2024/11/463527559/NB/SY/JR/181055037/whatsapp-image-2024-11-06-at-7-57-58-pm-1-500x500.jpeg" alt="Accessories" class="object-contain w-32 h-32 mb-2 rounded-xl shadow-sm">
+            <div class="flex space-x-2">
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">A+</span>
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">V</span>
+            </div>
+          </div>
+          <div class="flex-1 flex flex-col">
+            <span class="block text-base font-bold text-neutral-900 leading-tight mb-1">Accessories, Screws & Sealants</span>
+            <span class="flex items-center text-yellow-400 mb-1">
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-gray-200" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <span class="text-xs text-neutral-500 ml-1">(19)</span>
+            </span>
+            <span class="block text-xs text-neutral-400">Price</span>
+            <span class="block text-lg font-bold text-green-600 mb-1">₹0.80</span>
+          </div>
+        </button>
+      </div>
+      <!-- Right Arrow -->
+      <button id="bestSellerRight" class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-neutral-200 rounded-full shadow p-2 hover:bg-neutral-100 transition" aria-label="Scroll right">
+        <svg class="w-6 h-6 text-neutral-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+<script>
+  // Simple horizontal scroll for best sellers
+  const scrollDiv = document.getElementById('bestSellerScroll');
+  const leftBtn = document.getElementById('bestSellerLeft');
+  const rightBtn = document.getElementById('bestSellerRight');
+  if (scrollDiv && leftBtn && rightBtn) {
+    leftBtn.style.display = 'flex';
+    rightBtn.style.display = 'flex';
+    leftBtn.onclick = () => scrollDiv.scrollBy({left: -340, behavior: 'smooth'});
+    rightBtn.onclick = () => scrollDiv.scrollBy({left: 340, behavior: 'smooth'});
+  }
+</script>
+
+<!-- --- REMOVE GAPS BETWEEN SECTIONS --- -->
+<style>
+  #shop-products {
+    margin-bottom: 0 !important;
+    padding-bottom: 1.5rem !important;
+  }
+  #about {
+    margin-top: 0 !important;
+    padding-top: 1.5rem !important;
+  }
+  #products {
+    margin-top: 0 !important;
+    padding-top: 1.5rem !important;
+  }
+</style>
+<hr style="height: 4px; border: none; background-color:black;">
+<!-- --- ABOUT US SECTION (no gap above) --- -->
+<section id="about" class="py-4 md:py-6 bg-white">
+    <br>
+    <br>
+  <div class="container mx-auto px-2 flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-8">
+    <div class="flex-shrink-0 w-full md:w-1/3 flex justify-center md:justify-end mb-4 md:mb-0">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Engineering Icon" class="w-28 h-28 md:w-32 md:h-32 object-contain grayscale" loading="lazy">
+    </div>
+    <div class="w-full md:w-2/3 text-center md:text-left">
+      <div class="flex items-center justify-center md:justify-start mb-2">
+        <span class="inline-block bg-black text-white rounded-full px-3 py-1 text-xs font-semibold tracking-widest uppercase mr-2">About Us</span>
+        <span class="inline-block w-8 h-1 bg-neutral-200 rounded"></span>
+      </div>
+      <h2 class="text-2xl md:text-3xl font-extrabold text-neutral-900 mb-2 tracking-tight">Engineering Lasting Protection</h2>
+      <p class="text-base md:text-lg text-neutral-700 leading-snug mb-2">
+        At <span class="font-bold text-black">Uttam Roofing Solutions</span>, we don’t just build roofs—we engineer <span class="text-black font-semibold">lasting protection</span> for your homes and businesses.
+      </p>
+      <ul class="text-neutral-700 text-sm md:text-base mb-2 space-y-1">
+        <li>• <span class="font-medium">Premium, ISI-certified materials</span> for every project</li>
+        <li>• <span class="font-medium">Precision craftsmanship</span> by experienced professionals</li>
+        <li>• <span class="font-medium">Transparent, customer-first service</span> from start to finish</li>
+      </ul>
+      <p class="text-neutral-600 text-xs md:text-sm mt-2">
+        Based in Satara, Maharashtra. Trusted by families & businesses since 1980.
+      </p>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+</section>
+<hr style="height: 4px; border: none; background-color: black;">
+<!-- --- OUR ROOFING SOLUTIONS SECTION (with thin black border on product cards) --- -->
+<section id="products" class="py-6 md:py-8 bg-white">
+  <div class="container mx-auto px-2">
+    <div class="text-center mb-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-neutral-900 mb-2">Our Roofing Solutions</h2>
+      <p class="text-base text-neutral-700">Durable. Reliable. Affordable. Explore our range of premium roofing products, engineered for lasting protection and modern appeal.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Polycarbonate Sheets -->
+      <div id="polycarbonate-sheets" class="bg-white rounded-xl shadow p-5 flex flex-col items-center border border-black/10" style="border-width:1px;">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/11/464073875/MW/RE/TP/181055037/fluted-polycarbonate-sheet-500x500.jpg" alt="Polycarbonate Sheets" class="w-32 h-32 object-contain mb-4 rounded">
+        <h3 class="font-bold text-lg text-neutral-900 mb-1">Polycarbonate Sheets</h3>
+        <p class="text-neutral-700 text-sm mb-2 text-center">
+          <strong>Transparent Strength & Modern Appeal</strong><br>
+          Virtually unbreakable, superior light transmission, and excellent UV protection. Ideal for skylights, verandas, carports, greenhouses, and industrial roofing.
+        </p>
+        <ul class="text-neutral-600 text-xs mb-2">
+          <li><strong>Types:</strong> Clear Profiled, Solid, Multiwall, UV-Protected</li>
+        </ul>
+        <div class="flex items-center justify-between w-full mt-2">
+          <span class="text-base font-bold text-green-700">₹4,000.00</span>
+          <a href="Polycarbonate%20Sheets.html" class="bg-blue-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Learn More</a>
+        </div>
+      </div>
+      <!-- Mild Steel Pipes -->
+      <div id="mild-steel-pipes" class="bg-white rounded-xl shadow p-5 flex flex-col items-center border border-black/10" style="border-width:1px;">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/11/464019561/XN/TE/LR/181055037/apl-apollo-gp-pipes-500x500.jpg" alt="Mild Steel Pipes" class="w-32 h-32 object-contain mb-4 rounded">
+        <h3 class="font-bold text-lg text-neutral-900 mb-1">Mild Steel Pipes</h3>
+        <p class="text-neutral-700 text-sm mb-2 text-center">
+          <strong>Unmatched Resilience & Durability</strong><br>
+          Extreme durability, weather resistance, and fire resistance. Available in corrugated, trapezoidal, and various color-coated profiles for robust protection.
+        </p>
+        <ul class="text-neutral-600 text-xs mb-2">
+          <li><strong>Types:</strong> Color-Coated (PPGI/PPGL), Galvanized Iron (GI), Galvalume, Corrugated, Trapezoidal</li>
+        </ul>
+        <div class="flex items-center justify-between w-full mt-2">
+          <span class="text-base font-bold text-green-700">₹350.00</span>
+          <a href="Mild%20Steel%20Pipes.html" class="bg-blue-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Learn More</a>
+        </div>
+      </div>
+      <!-- Acrylic Sheets -->
+      <div id="acrylic-sheets" class="bg-white rounded-xl shadow p-5 flex flex-col items-center border border-black/10" style="border-width:1px;">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/11/464073010/KN/JF/TS/181055037/acrylic-sheet-500x500.jpg" alt="Acrylic Sheets" class="w-32 h-32 object-contain mb-4 rounded">
+        <h3 class="font-bold text-lg text-neutral-900 mb-1">Acrylic Sheets</h3>
+        <p class="text-neutral-700 text-sm mb-2 text-center">
+          <strong>Versatile & Lightweight for Decorative Use</strong><br>
+          Lightweight, easy to shape, and high-gloss finish. Perfect for signage, decorative panels, and light diffusion with good scratch resistance.
+        </p>
+        <ul class="text-neutral-600 text-xs mb-2">
+          <li><strong>Types:</strong> Fluted, Crystal Clear, Alabaster, Opaque, Frosted</li>
+        </ul>
+        <div class="flex items-center justify-between w-full mt-2">
+          <span class="text-base font-bold text-green-700">₹3,200.00</span>
+          <a href="Acrylic%20Sheets.html" class="bg-blue-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Learn More</a>
+        </div>
+      </div>
+      <!-- Mild Steel Structures -->
+      <div id="mild-steel-structures" class="bg-white rounded-xl shadow p-5 flex flex-col items-center border border-black/10" style="border-width:1px;">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/11/464072607/IN/WJ/MF/181055037/rectangular-apl-apollo-gp-pipe-500x500.jpg" alt="Mild Steel Structures" class="w-32 h-32 object-contain mb-4 rounded">
+        <h3 class="font-bold text-lg text-neutral-900 mb-1">Mild Steel Structures</h3>
+        <p class="text-neutral-700 text-sm mb-2 text-center">
+          <strong>The Foundation of Strength</strong><br>
+          High tensile strength and cost-effective. Custom fabrication for large spans, heavy loads, and complex architectural designs.
+        </p>
+        <ul class="text-neutral-600 text-xs mb-2">
+          <li><strong>Types:</strong> Square Pipes, Rectangular Pipes, Circular Pipes, Custom Fabricated Sections</li>
+        </ul>
+        <div class="flex items-center justify-between w-full mt-2">
+          <span class="text-base font-bold text-green-700">Custom</span>
+          <a href="Mild%20Steel%20Structures.html" class="bg-blue-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Learn More</a>
+        </div>
+      </div>
+      <!-- Gutter Systems -->
+      <div id="gutter-systems" class="bg-white rounded-xl shadow p-5 flex flex-col items-center border border-black/10" style="border-width:1px;">
+        <img src="C:\Users\virag\OneDrive\Desktop\Uttam Roofing Solution\Gutter System - Euro Guard UPVC Rain Gutters System from Satara_files\euro-guard-upvc-rain-gutters-system-125x125(2).jpg" alt="Gutter Systems" class="w-32 h-32 object-contain mb-4 rounded">
+        <h3 class="font-bold text-lg text-neutral-900 mb-1">Gutter Systems</h3>
+        <p class="text-neutral-700 text-sm mb-2 text-center">
+          <strong>Efficient Water Management</strong><br>
+          Corrosion-resistant UPVC gutters for optimal drainage and long-term performance. Easy to install and maintain.
+        </p>
+        <ul class="text-neutral-600 text-xs mb-2">
+          <li><strong>Types:</strong> UPVC Rain Gutters, Half-Round Gutters, Squareline Gutters, Hysquare Gutters</li>
+        </ul>
+        <div class="flex items-center justify-between w-full mt-2">
+          <span class="text-base font-bold text-green-700">₹250.00</span>
+          <a href="Accesories.html" class="bg-blue-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Learn More</a>
+        </div>
+      </div>
+      <!-- Accessories -->
+      <div id="accessories" class="bg-white rounded-xl shadow p-5 flex flex-col items-center border border-black/10" style="border-width:1px;">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/11/463527559/NB/SY/JR/181055037/whatsapp-image-2024-11-06-at-7-57-58-pm-1-500x500.jpeg" alt="Accessories" class="w-32 h-32 object-contain mb-4 rounded">
+        <h3 class="font-bold text-lg text-neutral-900 mb-1">Accessories</h3>
+        <p class="text-neutral-700 text-sm mb-2 text-center">
+          <strong>The Details That Matter for Lasting Performance</strong><br>
+          Premium screws, adhesives, sealants, and fittings for secure, weatherproof, and professional installations.
+        </p>
+        <ul class="text-neutral-600 text-xs mb-2">
+          <li><strong>Types:</strong> Self-Tapping Screws, Adhesives, Sealants, Fasteners, Flashing Materials</li>
+        </ul>
+        <div class="flex items-center justify-between w-full mt-2">
+          <span class="text-base font-bold text-green-700">₹0.80</span>
+          <a href="Accesories.html" class="bg-blue-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section id="contact" class="py-7 md:py-9 bg-neutral-900 text-white">
+            <div class="container mx-auto px-2 text-center">
+                   <h2 class="text-2xl md:text-3xl font-bold mb-2">Ready to Secure Your Property?</h2>
+                   <p class="text-base text-neutral-300 mb-4">Contact us today for a free, no-obligation consultation and quote.</p>
+                   <div class="max-w-3xl mx-auto bg-neutral-50 text-neutral-800 rounded-md shadow p-4 grid md:grid-cols-3 gap-2 text-left">
+                       <div class="md:col-span-1">
+                            <h3 class="font-bold text-lg mb-2">Contact Details</h3>
+                            <p class="mb-2"><strong>Phone:</strong><br> <a href="tel:+918041014685" class="text-black hover:underline">+91 8041014685</a></p>
+                            <p class="mb-2"><strong>Email:</strong><br> <a href="mailto:contact@uttamroofing.example.com" class="text-black hover:underline">contact@uttamroofing.example.com</a></p>
+                            <p class="mb-2"><strong>Address:</strong><br> 123 Uttam Nagar, Satara, Maharashtra, India</p>
+                            <div class="flex space-x-4 mt-4 justify-center">
+                                <a href="https://www.facebook.com/uttamroofingsolutions" target="_blank" class="text-blue-500 hover:text-blue-700 transition">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 2a6 6 0 00-6 6v4H8v4h4v10h4V16h4l2-4h-6V8a2 2 0 012-2h2V2h-2z"/></svg>
+                                </a>
+                                <a href="https://www.instagram.com/uttamroofingsolutions" target="_blank" class="text-pink-500 hover:text-pink-700 transition">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8a6 6 0 00-8 0m8 0a6 6 0 018 0m-8 0v8m0 0a6 6 0 01-8 0m8 0V8z"/></svg>
+                                </a>
+                                <a href="https://wa.me/918041014685" target="_blank" class="text-green-500 hover:text-green-700 transition">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18M3 12h18M3 21h18"/></svg>
+                                </a>
+                            </div>
+                       </div>
+                       <div class="md:col-span-2 mt-4 md:mt-0">
+                            <h3 class="font-bold text-lg mb-2">Send Us a Message</h3>
+                            <form action="#" method="POST" class="grid grid-cols-1 gap-4">
+                                <input type="text" name="name" placeholder="Your Name" class="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <input type="email" name="email" placeholder="Your Email" class="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <input type="text" name="phone" placeholder="Your Phone" class="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <textarea name="message" rows="4" placeholder="Your Message" class="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-600 transition-all">Send Message</button>
+                            </form>
+                       </div>
+                   </div>
+            </div>
+        </section>
+
+        <footer class="bg-neutral-900 text-white py-6">
+            <div class="container mx-auto px-4 text-center">
+                <p class="text-sm">&copy;2024 Uttam Roofing Solutions. All rights reserved.</p>
+                <div class="flex justify-center space-x-4 mt-2">
+                    <a href="#" class="text-white hover:text-blue-400 transition">We Protect Homes-</a>
+                    <a href="#" class="text-white hover:text-blue-400 transition"></a>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

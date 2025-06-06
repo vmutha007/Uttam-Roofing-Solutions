@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uttam Roofing Solutions - Durable & Innovative Roofing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff; /* Completely white background */
+            color: #262626; /* Near-black for premium look */
+        }
+        /* Remove or comment out the .hero-bg background */
+        /* .hero-bg {
+            background-color: #f0f0f0; /* Very light grey for a subtle background, no graphic image */
+        } */
+        .tab-active {
+            border-color: #0ea5e9; /* sky-500 */
+            background-color: #0ea5e9;
+            color: white;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .tab-inactive {
+            border-color: #e2e8f0; /* slate-200 */
+            background-color: #ffffff;
+            color: #475569; /* slate-600 */
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 50vh;
+        }
+        hr.thin-line {
+            border: 0;
+            height: 1px;
+            background-color: #e2e8f0; /* slate-200 for a thin line */
+            margin: 4rem auto; /* spacing above and below */
+            max-width: 1200px;
+        }
+
+        /* Styles for the 3D Model Viewer */
+        .hero-3d-model {
+            width: 100%; /* Adjust width as needed */
+            height: 250px; /* Set a specific height */
+            max-width: 400px; /* Optional: limit max width */
+            margin: 20px auto 0; /* Center and add top margin */
+            display: block; /* Ensures margin auto works for centering */
+            background-color: transparent; /* Make background transparent */
+            --poster-color: transparent; /* Hides the default poster background */
+            overflow: hidden; /* Prevent model overflow if not perfectly sized */
+        }
+
+    </style>
+</head>
+<body class="text-neutral-800">
+<hr style="height: 2px; border: none; background-color: black;"
+    <header class="bg-white/80 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50 border-b border-black/10 transition-all duration-300">
+    <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+            <img src="urflogo.png" alt="Logo" class="w-18 h-12" />
+            <span class="text-2xl font-bold uppercase tracking-widest text-neutral-900" style="font-family: 'Montserrat', 'Inter', Arial, sans-serif; letter-spacing: 0;">
+                Uttam Roofing Solutions
+            </span>
+        </div>
+        <div class="hidden md:flex space-x-4 items-center">
+            <a href="tel:+918308443333" class="bg-black text-white px-4 py-2 rounded-full hover:bg-neutral-900 transition-all shadow">📞 Call Uttam</a>
+            <a href="tel:+919765633344" class="bg-black text-white px-4 py-2 rounded-full hover:bg-neutral-900 transition-all shadow">📞 Call Rohit</a>
+            <div class="relative group">
+                <button class="bg-black text-white px-4 py-2 rounded-full hover:bg-neutral-900 transition-all shadow flex items-center">
+                    💬 WhatsApp
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="hidden group-hover:block absolute right-0 mt-2 bg-white text-black rounded shadow-lg z-50 min-w-[180px] border border-black/10">
+                    <a href="https://wa.me/918308443333" target="_blank" class="block px-4 py-2 hover:bg-neutral-200">WhatsApp Uttam Mutha</a>
+                    <a href="https://wa.me/919765633344" target="_blank" class="block px-4 py-2 hover:bg-neutral-200">WhatsApp Rohit Mutha</a>
+                </div>
+            </div>
+        </div>
+        <button id="mobile-menu-button" class="md:hidden">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 bg-white/95 backdrop-blur-md border-b border-black/10">
+        <a href="tel:+918308443333" class="block mt-2 bg-black text-white text-center px-4 py-2 rounded-full hover:bg-neutral-900 shadow">📞 Call Uttam</a>
+        <a href="tel:+919765633344" class="block mt-2 bg-black text-white text-center px-4 py-2 rounded-full hover:bg-neutral-900 shadow">📞 Call Rohit</a>
+        <div class="relative group">
+            <button class="w-full mt-2 bg-black text-white text-center px-4 py-2 rounded-full hover:bg-neutral-900 shadow flex items-center justify-center">
+                💬 WhatsApp
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="hidden group-hover:block absolute left-1/2 -translate-x-1/2 mt-2 bg-white text-black rounded shadow-lg z-50 min-w-[180px] border border-black/10">
+                <a href="https://wa.me/918308443333" target="_blank" class="block px-4 py-2 hover:bg-neutral-200">WhatsApp Uttam Mutha</a>
+                <a href="https://wa.me/919765633344" target="_blank" class="block px-4 py-2 hover:bg-neutral-200">WhatsApp Rohit Mutha</a>
+            </div>
+        </div>
+    </div>
+    <hr style="height: 3px; border: none; background-color: black; margin:0;">
+</header>
+
+    <main>
+       
+        <section id="hero" class="text-neutral-900 h-[50vh] md:h-[70vh] flex items-center justify-center relative overflow-hidden">
+            <!-- Video Background -->
+            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0" id="hero-bg-video">
+                <source src="C:\Users\virag\OneDrive\Desktop\Uttam Roofing Solution\Video_Ready_More_White.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Add a dark overlay for better contrast -->
+            <div class="absolute inset-0 bg-black bg-opacity-30 z-0"></div>
+            <div class="absolute top-8 right-8 z-10 flex flex-col items-end max-w-md w-full">
+                <i class="text-lg md:text-xl font-medium text-white mb--200 italic"><b>“Rain may fall, winds may howl — but under our roof, you’ll always feel a little safer.”</i></b>
+            
+                <span class="block mt-6 text-4xl md:text-5xl font-extrabold tracking-widest uppercase text-white px-4 py-2 rounded text-right border border-black shadow-lg" style="font-family: 'Montserrat', 'Inter', Arial, sans-serif; letter-spacing: 0.1em;">
+                    Uttam Roofing Solutions
+                </span>
+                <p class="text-base md:text-lg text-neutral-200 mb-4 text-right drop-shadow"><br>
+                  <b><i>  #1 Roofing Material Supplier in Satara. <br> </i> 
+                    Visit Now!</b>
+                </p>
+                <a href="tel:+918041014685" class="bg-white text-black text-lg px-7 py-2 rounded-full hover:bg-neutral-200 transition-all shadow-lg transform hover:scale-105 mt-2 inline-block font-semibold">Enquire Now!</a>
+            </div>
+        </section>
+<hr style="height: 5px; border: none; background-color: black;">
+        <!-- --- SHOP OUR BEST SELLERS SECTION (with horizontal scroll/arrow navigation) --- -->
+<section id="shop-products" class="py-10 md:py-12 bg-white relative overflow-hidden">
+  <!-- Lively, premium animated background with SVG roof icons and soft gradients -->
+  <div class="absolute inset-0 pointer-events-none z-0" aria-hidden="true">
+    <!-- Subtle animated gradient "light sweep" -->
+    <div id="lively-bg-sweep"
+         style="position:absolute;inset:0;z-index:0;pointer-events:none;
+           background: radial-gradient(ellipse 80% 60% at 60% 30%,rgba(0,0,0,0.07) 0%,transparent 80%),
+                       radial-gradient(ellipse 60% 40% at 20% 80%,rgba(0,0,0,0.05) 0%,transparent 80%);
+           animation: sweep 8s linear infinite alternate;">
+    </div>
+    <!-- SVG geometric lines -->
+    <svg width="100%" height="100%" viewBox="0 0 1440 400" fill="none" style="position:absolute;top:0;left:0;z-index:1;opacity:0.08;pointer-events:none;">
+      <polyline points="0,350 400,300 800,350 1200,320 1440,370" stroke="#222" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="0,250 300,200 700,250 1100,220 1440,270" stroke="#222" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="0,150 200,100 600,150 1000,120 1440,170" stroke="#222" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <!-- SVG roof icons for extra liveliness -->
+    <svg width="60" height="30" fill="none" viewBox="0 0 60 30" style="position:absolute;top:18%;left:8%;opacity:0.13;">
+      <path d="M5 25 L30 5 L55 25" stroke="#222" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="23" y="15" width="14" height="10" rx="2" fill="#222" opacity="0.2"/>
+    </svg>
+    <svg width="50" height="25" fill="none" viewBox="0 0 50 25" style="position:absolute;bottom:12%;right:10%;opacity:0.10;">
+      <path d="M5 20 L25 5 L45 20" stroke="#222" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="18" y="12" width="14" height="8" rx="2" fill="#222" opacity="0.15"/>
+    </svg>
+    <!-- Add more SVGs or move as needed -->
+    <style>
+      @keyframes sweep {
+        0% { filter: blur(0px) brightness(1); opacity: 1; }
+        100% { filter: blur(2px) brightness(1.07); opacity: 1; }
+      }
+    </style>
+  </div>
+  <div class="container mx-auto px-3 relative z-9">
+    <h2 class="text-xl md:text-2xl font-extrabold text-neutral-900 mb-6 text-center tracking-widest uppercase" style="font-family: 'Montserrat', 'Inter', Arial, sans-serif;">
+      <span class="inline-block px-6 py-2 bg-white/90 rounded-full shadow border border-black/20">
+        We Serve You With –
+      </span>
+    </h2>
+    <div class="flex flex-row justify-center items-center gap-2 md:gap-4 overflow-x-auto pb-2">
+      <!-- Card 1 -->
+      <a href="#polycarbonate-sheets" class="group flex flex-col items-center bg-white rounded-xl shadow px-3 py-5 min-w-[110px] max-w-[120px] w-full transition hover:shadow-2xl hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-black cursor-pointer border border-neutral-200 hover:border-black">
+        <div class="w-12 h-12 mb-1 flex items-center justify-center relative">
+          <img src="C:\Users\virag\OneDrive\Desktop\Uttam Roofing Solution\roofingicon.png" alt="Polycarbonate Sheets" class="w-10 h-10 object-contain transition-transform duration-300 group-hover:scale-110" />
+          <span class="absolute -top-2 -right-2 bg-black text-white text-[10px] px-2 py-[2px] rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow">Top</span>
+        </div>
+        <span class="text-sm font-semibold text-neutral-900 text-center leading-tight mt-1 group-hover:underline">Polycarbonate<br>Sheets</span>
+      </a>
+      <!-- Card 2 -->
+      <a href="#mild-steel-pipes" class="group flex flex-col items-center bg-white rounded-xl shadow px-3 py-5 min-w-[110px] max-w-[120px] w-full transition hover:shadow-2xl hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-black cursor-pointer border border-neutral-200 hover:border-black">
+        <div class="w-12 h-12 mb-1 flex items-center justify-center relative">
+          <img src="C:\Users\virag\OneDrive\Desktop\Uttam Roofing Solution\steelpipe icon.png" alt="Acrylic Sheets" class="w-10 h-10 object-contain transition-transform duration-300 group-hover:scale-110" />
+        </div>
+        <span class="text-sm font-semibold text-neutral-900 text-center leading-tight mt-1 group-hover:underline">Acrylic<br>Sheets</span>
+      </a>
+      <!-- Card 3 -->
+      <a href="#gutter-systems" class="group flex flex-col items-center bg-white rounded-xl shadow px-3 py-5 min-w-[110px] max-w-[120px] w-full transition hover:shadow-2xl hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-black cursor-pointer border border-neutral-200 hover:border-black">
+        <div class="w-12 h-12 mb-1 flex items-center justify-center relative">
+          <img src="C:\Users\virag\OneDrive\Desktop\Uttam Roofing Solution\gutter icon.png" alt="Gutter Systems" class="w-10 h-10 object-contain transition-transform duration-300 group-hover:scale-110" />
+        </div>
+        <span class="text-sm font-semibold text-neutral-900 text-center leading-tight mt-1 group-hover:underline">Gutter<br>Systems</span>
+      </a>
+      <!-- Card 4 -->
+      <a href="#accessories" class="group flex flex-col items-center bg-white rounded-xl shadow px-3 py-5 min-w-[110px] max-w-[120px] w-full transition hover:shadow-2xl hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-black cursor-pointer border border-neutral-200 hover:border-black">
+        <div class="w-12 h-12 mb-1 flex items-center justify-center relative">
+          <img src="C:\Users\virag\OneDrive\Desktop\Uttam Roofing Solution\acrylic icon.png" alt="Accessories" class="w-10 h-10 object-contain transition-transform duration-300 group-hover:scale-110" />
+        </div>
+        <span class="text-sm font-semibold text-neutral-900 text-center leading-tight mt-1 group-hover:underline">Accessories</span>
+      </a>
+      <!-- Card 5 -->
+      <a href="#roofing-fasteners" class="group flex flex-col items-center bg-white rounded-xl shadow px-3 py-5 min-w-[110px] max-w-[120px] w-full transition hover:shadow-2xl hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-black cursor-pointer border border-neutral-200 hover:border-black">
+        <div class="w-12 h-12 mb-1 flex items-center justify-center relative">
+          <img src="C:\Users\virag\OneDrive\Desktop\Uttam Roofing Solution\turbofan icon.png" alt="Roofing Fasteners" class="w-10 h-10 object-contain transition-transform duration-300 group-hover:scale-110" />
+        </div>
+        <span class="text-sm font-semibold text-neutral-900 text-center leading-tight mt-1 group-hover:underline">Roofing<br>Fasteners</span>
+      </a>
+    </div>
+    <!-- Companies/Brands Section -->
+    <div class="mt-10">
+      <h3 class="text-lg md:text-xl font-bold text-neutral-800 mb-4 text-center tracking-widest uppercase" style="font-family: 'Montserrat', 'Inter', Arial, sans-serif;">
+        Companies' Products We Sell
+      </h3>
+      <div class="flex flex-row justify-center items-center gap-6 md:gap-10 overflow-x-auto pb-2">
+        <!-- Example company icons, replace src with your PNGs/SVGs -->
+        <div class="flex flex-col items-center">
+          <img src="C:\Users\virag\OneDrive\Desktop\Uttam Roofing Solution\TATA Group Logo.png" alt="Company 1" class="w-14 h-14 object-contain black hover:black-0 transition" />
+          <span class="text-xs mt-1 font-semibold text-neutral-700" style="font-family: 'Montserrat', 'Inter', Arial, sans-serif;">Tata Steel</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="C:\Users\virag\OneDrive\Desktop\Uttam Roofing Solution\tilaralogo.png" alt="Company 2" class="w-14 h-14 object-contain black hover:black-0 transition" />
+          <span class="text-xs mt-1 font-semibold text-neutral-700" style="font-family: 'Montserrat', 'Inter', Arial, sans-serif;">Tilara</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="C:\Users\virag\OneDrive\Desktop\Uttam Roofing Solution\Apollo.png" alt="Company 3" class="w-14 h-14 object-contain black hover:black-0 transition" />
+          <span class="text-xs mt-1 font-semibold text-neutral-700" style="font-family: 'Montserrat', 'Inter', Arial, sans-serif;">Apollo</span>
+        </div>
+        <!-- Add more as needed -->
+        <!-- You can add more SVG roof icons here for extra liveliness if you want -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- --- REMOVE GAPS BETWEEN SECTIONS --- -->
+<style>
+  #shop-products {
+    margin-bottom: 0 !important;
+    padding-bottom: 1.5rem !important;
+  }
+  #about {
+    margin-top: 0 !important;
+    padding-top: 1.5rem !important;
+  }
+  #products {
+    margin-top: 0 !important;
+    padding-top: 1.5rem !important;
+  }
+</style>
+<hr style="height: 4px; border: none; background-color:black;">
+<!-- --- ABOUT US SECTION (no gap above) --- -->
+ <br>
+<section id="about" class="py-4 md:py-6 bg-white">
+    <div class="container mx-auto px-2 flex flex-col items-center">
+        <div class="flex flex-row justify-center gap-8 mb-4">
+            <div class="flex flex-col items-center">
+                <img src="uttampartner1.png" alt="Uttam Mutha" class="w-28 h-28 md:w-32 md:h-32 object-contain rounded-full border-2" style="border-color: #c32323;" loading="lazy">
+                <span class="mt-2 text-base md:text-lg font-semibold text-neutral-900">Uttam Mutha</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="rohitpartner2.png" alt="Rohit Mutha" class="w-28 h-28 md:w-32 md:h-32 object-contain rounded-full border-2" style="border-color: #721dc6;" loading="lazy">
+                <span class="mt-2 text-base md:text-lg font-semibold text-neutral-900">Rohit Mutha</span>
+            </div>
+        </div>
+        <div class="flex items-center justify-center md:justify-start mb-2">
+            <span class="inline-block bg-cyan-500 text-white rounded-full px-3 py-1 text-xs font-semibold tracking-widest uppercase mr-2">About Us</span>
+            <span class="inline-block w-8 h-1 bg-neutral-200 rounded"></span>
+        </div>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-neutral-900 mb-2 tracking-tight">Quality Beyond Expectation.</h2>
+        <p class="text-base md:text-lg text-neutral-700 leading-snug mb-2">
+           <b> There's a certain melancholy beauty in protection, in being the shield against the storm.</b>
+        </p>
+        <ul class="text-neutral-700 text-sm md:text-base mb-2 space-y-1">
+            <li>• <span class="font-medium">Providing the - finest roofing solutions at reasonable rates that respect you and your Investment.</span></li>
+            <li>• <span class="font-medium">Understanding the delicate rhythm of your projects, we ensure timely delivery - Everytime.</span> </li>
+            <li>• <span class="font-medium"> We're more than suppliers; we're partners in your vision, offering knowledgeable support.</span> </li>
+        </ul>
+        <p class="text-neutral-600 text-xs md:text-sm mt-2">
+            Based in Satara, Maharashtra. Trusted by families & businesses since 1980.
+        </p>
+    </div>
+</section>
+<br>
+<hr style="height: 4px; border: none; background-color: black;">
+<!-- --- OUR ROOFING SOLUTIONS SECTION (with thin black border on product cards) --- -->
+<section id="products" class="py-6 md:py-8 bg-white">
+  <div class="container mx-auto px-2">
+    <div class="text-center mb-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-neutral-900 mb-2">Our Roofing Solutions</h2>
+      <p class="text-base text-neutral-700">Durable. Reliable. Affordable. Explore our range of premium roofing products, engineered for lasting protection and modern appeal.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Polycarbonate Sheets -->
+      <div id="polycarbonate-sheets" class="bg-white rounded-xl shadow p-5 flex flex-col items-center border border-black/10" style="border-width:1px;">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/11/464073875/MW/RE/TP/181055037/fluted-polycarbonate-sheet-500x500.jpg" alt="Polycarbonate Sheets" class="w-32 h-32 object-contain mb-4 rounded">
+        <h3 class="font-bold text-lg text-neutral-900 mb-1">Polycarbonate Sheets</h3>
+        <p class="text-neutral-700 text-sm mb-2 text-center">
+          <strong>Transparent Strength & Modern Appeal</strong><br>
+          Virtually unbreakable, superior light transmission, and excellent UV protection. Ideal for skylights, verandas, carports, greenhouses, and industrial roofing.
+        </p>
+        <ul class="text-neutral-600 text-xs mb-2">
+          <li><strong>Types:</strong> Clear Profiled, Solid, Multiwall, UV-Protected</li>
+        </ul>
+        <div class="flex items-center justify-between w-full mt-2">
+          <span class="text-base font-bold text-green-700">Starting from ₹800.00</span>
+          <a href="Polycarbonate%20Sheets.html" class="bg-blue-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Learn More</a>
+        </div>
+      </div>
+      <!-- Mild Steel Pipes -->
+      <div id="mild-steel-pipes" class="bg-white rounded-xl shadow p-5 flex flex-col items-center border border-black/10" style="border-width:1px;">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/11/464019561/XN/TE/LR/181055037/apl-apollo-gp-pipes-500x500.jpg" alt="Mild Steel Pipes" class="w-32 h-32 object-contain mb-4 rounded">
+        <h3 class="font-bold text-lg text-neutral-900 mb-1">Mild Steel Pipes</h3>
+        <p class="text-neutral-700 text-sm mb-2 text-center">
+          <strong>Unmatched Resilience & Durability</strong><br>
+          Extreme durability, weather resistance, and fire resistance. Available in corrugated, trapezoidal, and various color-coated profiles for robust protection.
+        </p>
+        <ul class="text-neutral-600 text-xs mb-2">
+          <li><strong>Types:</strong> Color-Coated (PPGI/PPGL), Galvanized Iron (GI), Galvalume, Corrugated, Trapezoidal</li>
+        </ul>
+        <div class="flex items-center justify-between w-full mt-2">
+          <span class="text-base font-bold text-green-700">Starting from ₹1050.00</span>
+          <a href="Mild%20Steel%20Pipes.html" class="bg-blue-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Learn More</a>
+        </div>
+      </div>
+      <!-- Acrylic Sheets -->
+      <div id="acrylic-sheets" class="bg-white rounded-xl shadow p-5 flex flex-col items-center border border-black/10" style="border-width:1px;">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/11/464073010/KN/JF/TS/181055037/acrylic-sheet-500x500.jpg" alt="Acrylic Sheets" class="w-32 h-32 object-contain mb-4 rounded">
+        <h3 class="font-bold text-lg text-neutral-900 mb-1">Acrylic Sheets</h3>
+        <p class="text-neutral-700 text-sm mb-2 text-center">
+          <strong>Versatile & Lightweight for Decorative Use</strong><br>
+          Lightweight, easy to shape, and high-gloss finish. Perfect for signage, decorative panels, and light diffusion with good scratch resistance.
+        </p>
+        <ul class="text-neutral-600 text-xs mb-2">
+          <li><strong>Types:</strong> Fluted, Crystal Clear, Alabaster, Opaque, Frosted</li>
+        </ul>
+        <div class="flex items-center justify-between w-full mt-2">
+          <span class="text-base font-bold text-green-700">Starting from ₹1000.00</span>
+          <a href="Acrylic%20Sheets.html" class="bg-blue-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Learn More</a>
+        </div>
+      </div>
+      <!-- Gutter Systems -->
+      <div id="gutter-systems" class="bg-white rounded-xl shadow p-5 flex flex-col items-center border border-black/10" style="border-width:1px;">
+        <img src="C:\Users\virag\OneDrive\Desktop\Uttam Roofing Solution\Gutter System - Euro Guard UPVC Rain Gutters System from Satara_files\euro-guard-upvc-rain-gutters-system-125x125(2).jpg" alt="Gutter Systems" class="w-32 h-32 object-contain mb-4 rounded">
+        <h3 class="font-bold text-lg text-neutral-900 mb-1">Gutter Systems</h3>
+        <p class="text-neutral-700 text-sm mb-2 text-center">
+          <strong>Efficient Water Management</strong><br>
+          Corrosion-resistant UPVC gutters for optimal drainage and long-term performance. Easy to install and maintain.
+        </p>
+        <ul class="text-neutral-600 text-xs mb-2">
+          <li><strong>Types:</strong> UPVC Rain Gutters, Half-Round Gutters, Squareline Gutters, Hysquare Gutters</li>
+        </ul>
+        <div class="flex items-center justify-between w-full mt-2">
+          <span class="text-base font-bold text-green-700">Starting from ₹750.00</span>
+          <a href="Accessories.html" class="bg-blue-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Learn More</a>
+        </div>
+      </div>
+      <!-- Accessories -->
+      <div id="accessories" class="bg-white rounded-xl shadow p-5 flex flex-col items-center border border-black/10" style="border-width:1px;">
+        <img src="C:\Users\virag\OneDrive\Desktop\Uttam Roofing Solution\tape.png" alt="Accessories" class="w-32 h-32 object-contain mb-4 rounded">
+        <h3 class="font-bold text-lg text-neutral-900 mb-1">Accessories</h3>
+        <p class="text-neutral-700 text-sm mb-2 text-center">
+          <strong>The Details That Matter for Lasting Performance</strong><br>
+          Premium screws, adhesives, sealants, and fittings for secure, weatherproof, and professional installations.
+        </p>
+        <ul class="text-neutral-600 text-xs mb-2">
+          <li><strong>Types:</strong> Self-Tapping Screws, Adhesives, Sealants, Fasteners, Flashing Materials</li>
+        </ul>
+        <div class="flex items-center justify-between w-full mt-2">
+          <span class="text-base font-bold text-green-700">Starting from ₹100.00</span>
+          <a href="Accessories.html" class="bg-blue-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <!-- --- CONTACT SECTION UPDATED --- -->
+<section id="contact" class="py-7 md:py-9 bg-neutral-900 text-white">
+    <div class="container mx-auto px-2 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-2">Enquire Now for the Best Rates and Best Service.</h2>
+        <p class="text-base text-neutral-300 mb-4">We'll be more than happy to serve you ;) </p>
+        <div class="max-w-3xl mx-auto bg-neutral-50 text-neutral-800 rounded-md shadow p-4 grid md:grid-cols-3 gap-2 text-left">
+            <div class="md:col-span-1">
+                <h3 class="font-bold text-lg mb-2">Contact Details</h3>
+                <p class="mb-2"><strong>Uttam Mutha:</strong><br> <a href="tel:+918308443333" class="text-black hover:underline">+91 8308443333</a></p>
+                <p class="mb-2"><strong>Rohit Mutha:</strong><br> <a href="tel:+919765633344" class="text-black hover:underline">+91 9765633444</a></p>
+                <p class="mb-2"><strong>Email:</strong><br> <a href="mailto:uttammutha7@gmail.com" class="text-black hover:underline">uttammutha7@gmail.com</a></p>
+                <p class="mb-2"><strong>Address:</strong><br> Molacha Odha, Opposite ITI College, Azadnagar, Shahupuri, Satara, Maharashtra, India - 415002</p>
+                <div class="flex space-x-4 mt-4 justify-center">
+                    <a href="https://www.facebook.com/uttamroofingsolutions" target="_blank" class="text-blue-500 hover:text-blue-700 transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 2a6 6 0 00-6 6v4H8v4h4v10h4V16h4l2-4h-6V8a2 2 0 012-2h2V2h-2z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/uttamroofingsolutions" target="_blank" class="text-pink-500 hover:text-pink-700 transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8a6 6 0 00-8 0m8 0a6 6 0 018 0m-8 0v8m0 0a6 6 0 01-8 0m8 0V8z"/></svg>
+                    </a>
+                    <!-- WhatsApp Dropdown Button -->
+                    <div class="relative group">
+                        <button class="text-green-500 hover:text-green-700 transition focus:outline-none" id="wa-dropdown-btn">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18M3 12h18M3 21h18"/></svg>
+                        </button>
+                        <div class="hidden group-hover:block absolute left-1/2 -translate-x-1/2 mt-2 bg-white text-black rounded shadow-lg z-50 min-w-[180px]">
+                            <a href="https://wa.me/918308443333" target="_blank" class="block px-4 py-2 hover:bg-neutral-200">WhatsApp Uttam Mutha</a>
+                            <a href="https://wa.me/919765633344" target="_blank" class="block px-4 py-2 hover:bg-neutral-200">WhatsApp Rohit Mutha</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:col-span-2 mt-4 md:mt-0">
+                <h3 class="font-bold text-lg mb-2">Send Us a Message</h3>
+                <form action="#" method="POST" class="grid grid-cols-1 gap-4">
+                    <input type="text" name="name" placeholder="Your Name" class="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="email" name="email" placeholder="Your Email" class="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="text" name="phone" placeholder="Your Phone" class="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <textarea name="message" rows="4" placeholder="Your Message" class="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-600 transition-all">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <footer class="bg-neutral-900 text-white pt-6 pb-6">
+    <div class="container mx-auto px-4 text-center">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-2">
+            <p class="text-sm w-full md:w-auto mb-2 md:mb-0">
+                <i style="font-size: 1rem;"><b>&copy;2024 Uttam Roofing Solutions. All rights reserved.</i></b>
+            </p> 
+            <div class="flex flex-col md:flex-row items-center gap-2 w-full md:w-auto">
+                <span class="block text-xs italic text-neutral-300 mb-1 md:mb-0">
+                <b><h1 style="font-size:1rem;">“A roof is more than shelter—it's the promise of safety, hope, and new beginnings.”</h1></b>
+                </span>
+                <span class="block text-xs text-neutral-400">
+                  <h1 style="font-size:1.15rem;">  Made by <a href="https://instagram.com/vir4g" target="_blank" class="text-blue-400 hover:underline">@vir4g</a> with <span style="color:#e25555;">&#10084;&#65039;</span></h1>
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+    </main>
+</body>
+</html>

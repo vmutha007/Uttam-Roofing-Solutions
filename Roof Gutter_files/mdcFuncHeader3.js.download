@@ -1,0 +1,143 @@
+function userDataCookie() {
+    this.get = function(e) {
+        var a;
+        e = e || "ImeshVisitor";
+        var i = new Array;
+        i = document.cookie.split(";");
+        for (var t = 0; t < i.length; t++) {
+            var o = i[t];
+            if (o.replace(/^\s+|\s+$/g, "").split("=")[0] == e) {
+                var r = (o = unescape(o)).indexOf(e + "=");
+                a = o.substring(r + e.length + 1)
+            }
+        }
+        return a ? strToObj(a) : ""
+    }
+    ,
+    this.set = function(e, a) {
+        var i, t;
+        if ("xnHist" == (a = a || "ImeshVisitor"))
+            for (var o in i = {
+                pv: "1",
+                ipv: "1",
+                fpv: "1",
+                city: "1",
+                cvstate: "1",
+                popupshown: "1",
+                install: "1 ",
+                ss: "1",
+                mb: "1",
+                tm: "1",
+                age: "1",
+                count: "1",
+                time: "1",
+                glid: "1",
+                gname: "1",
+                gemail: "1"
+            },
+            t = (new userDataCookie).get(a),
+            i)
+                i[o] && "" != e[o] && 0 != e[o] ? i[o] = e[o] || t[o] : i[o] = e[o];
+        else if ("ImeshVisitor" == a) {
+            for (var o in i = {
+                fn: "1",
+                em: "1",
+                phcc: "1",
+                iso: "1",
+                mb1: "1",
+                ctid: "1",
+                glid: "1",
+                cd: "1",
+                cmid: "1",
+                utyp: "1",
+                ev: "1",
+                uv: "1",
+                usts: "1",
+                admln: "1",
+                admsales: 1,
+                sessionKey: "1"
+            },
+            t = (new userDataCookie).get(),
+            i)
+                i[o] && (i[o] = e[o] || t[o] || "");
+            var r = (new Date).toString();
+            i.cd = r.substr(8, 2) + "/" + r.substr(4, 3).toUpperCase() + "/" + r.substr(11, 4)
+        } 
+        // else if ("v4iilex" == a)
+        //     for (var o in i = {
+        //         admln: "1",
+        //         admsales: "1",
+        //         au: "1",
+        //         id: "1",
+        //         vcd: "1"
+        //     },
+        //     t = (new userDataCookie).get(a),
+        //     i)
+        //         i[o] && "" != e[o] && 0 != e[o] ? i[o] = e[o] || t[o] : i[o] = e[o];
+        else if ("im_iss" == a)
+            for (var o in i = {
+                t: "1"
+            },
+            t = (new userDataCookie).get(a),
+            i)
+                i[o] && "" != e[o] && 0 != e[o] ? i[o] = e[o] || t[o] : i[o] = e[o];
+        newCookie = objToStr(i),
+        "undefined" != typeof newCookie && "" != newCookie && null !== newCookie || gaTrack("userDataCookie set function of centralized header is empty" + newCookie),
+        expires = new Date,
+        "ImeshVisitor" == a && (expires.setTime(expires.getTime() + 63072e6),
+        document.cookie = a + "=" + escape(newCookie) + ";expires=" + expires.toGMTString() + ";domain=.indiamart.com;path=/;",
+        "undefined" != typeof perWidget && "MY" != glmodid && syncDataCheck()),
+        expires.setTime(expires.getTime() + 2592e6),
+        document.cookie = a + "=" + escape(newCookie) + ";expires=" + expires.toGMTString() + ";domain=.indiamart.com;path=/;"
+    }
+    ,
+    this.remove = function() {
+        document.cookie = "ImeshVisitor=;expires=;domain=.indiamart.com;path=/;"
+       // document.cookie = "v4iilex=;expires=;domain=.indiamart.com;path=/;"
+    }
+}
+function objToStr(e) {
+    var a = new Array;
+    for (var i in e)
+        a.push(i + "=" + e[i]);
+    return a = a.join("|")
+}
+function strToObj(e) {
+    var a = new Array;
+    a = e.split("|");
+    var t = {};
+    for (i = 0; i < a.length; i++) {
+        var o = a[i];
+        t[o.split("=")[0]] = o.split("=")[1]
+    }
+    return t
+}
+
+function readCookie(e) {
+    var a = e + "=";
+    return document.cookie.length > 0 && (offset = document.cookie.indexOf(a),
+    -1 != offset) ? (offset += a.length,
+    end = document.cookie.indexOf(";", offset),
+    -1 == end && (end = document.cookie.length),
+    unescape(document.cookie.substring(offset, end))) :  ""
+}
+page.notMeQ = new Array,
+page.Identified = function() {
+    for (var e = 0; e < page.IdentifiedQ.length; e++)
+        "function" == typeof page.IdentifiedQ[e] && page.IdentifiedQ[e].apply()
+}
+,
+page.IdentifiedQ = new Array,
+page.Identified = function() {
+    for (var e = 0; e < page.IdentifiedQ.length; e++)
+        "function" == typeof page.IdentifiedQ[e] && page.IdentifiedQ[e].apply()
+}
+,
+page.notMe = function() {
+    for (var e = 0; e < page.notMeQ.length; e++)
+        page.notMeQ[e].apply()
+}
+;
+var imesh_obj = new userDataCookie;
+var im_iss_obj = new userDataCookie();
+var v4iilex_obj = new userDataCookie();

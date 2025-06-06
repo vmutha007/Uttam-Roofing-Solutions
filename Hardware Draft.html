@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uttam Hardware Fittings - Durable & Versatile Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfcfc; /* Off-white for a natural base */
+            color: #333333; /* Darker gray for strong contrast */
+        }
+        h1, h2, h3 {
+            font-family: 'Lora', serif; /* Serif font for a more classic, woody feel */
+        }
+        .hero-bg {
+            background-color: #e0d8cc; /* Muted, light brown/beige for earthy feel */
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdib3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ3JpZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmNWU1ZGQiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZDFjYmJkIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIGZpbGw9InVybCgjZ3JpZCkiLz4KICA8Y2lyY2xlIGN4PSIwIiBjeT0iNjAiIHI9IjMwIiBmaWxsPSIjZjBjMGE0IiBvcGFjaXR5PSIwLjMiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjAiIHI9IjMwIiBmaWxsPSIjZjBjMGE0IiBvcGFjaXR5PSIwLjMiLz4KPC9zdmc+'); /* Subtle background pattern */
+            background-size: cover;
+        }
+        .header-line {
+            background-color: #4a382e; /* Dark brown for a stronger header line */
+        }
+        .accent-color {
+            color: #8B4513; /* SaddleBrown - a warm brown */
+        }
+        .bg-accent {
+            background-color: #A0522D; /* Siennna - a slightly darker, rich brown */
+        }
+        .bg-accent-dark {
+            background-color: #4a382e; /* Dark brown */
+        }
+        .border-accent {
+            border-color: #A0522D;
+        }
+        .tab-active {
+            border-color: #A0522D;
+            background-color: #A0522D;
+            color: white;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .tab-inactive {
+            border-color: #d1c1a9; /* Light woody tone */
+            background-color: #ffffff;
+            color: #6d5b4a; /* Muted brown text */
+        }
+        hr.thin-line {
+            background-color: #d1c1a9; /* Light woody tone for divider */
+        }
+        .best-seller-bg {
+            background: linear-gradient(135deg, #f5e5cf 0%, #e8d0b5 100%); /* Lighter, warmer gradient */
+        }
+        .card-border {
+            border-color: #bfa886; /* Medium woody border for cards */
+        }
+        .text-price {
+            color: #008000; /* Green for price, stands out */
+        }
+        .btn-primary {
+            background-color: #A0522D; /* Sienna */
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #8B4513; /* SaddleBrown */
+        }
+        .footer-bg {
+            background-color: #4a382e; /* Dark brown for footer */
+        }
+    </style>
+</head>
+<body class="text-neutral-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-neutral-900">
+                Uttam Hardware Fittings
+            </div>
+            <div class="hidden md:flex space-x-4 items-center">
+                <a href="tel:+918041014685" class="bg-accent-dark text-white px-4 py-2 rounded-full hover:bg-neutral-800 transition-all shadow">📞 Call Us</a>
+                <a href="https://wa.me/918041014685" target="_blank" class="bg-accent-dark text-white px-4 py-2 rounded-full hover:bg-neutral-800 transition-all shadow">💬 WhatsApp Enquiry</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+            <a href="tel:+918041014685" class="block mt-2 bg-accent-dark text-white text-center px-4 py-2 rounded-full hover:bg-neutral-800 shadow">📞 Call Us</a>
+            <a href="https://wa.me/918041014685" target="_blank" class="block mt-2 bg-accent-dark text-white text-center px-4 py-2 rounded-full hover:bg-neutral-800 shadow">💬 WhatsApp Enquiry</a>
+        </div>
+         <hr style="height: 5px; border: none; background-color: #4a382e;">
+    </header>
+
+    <main>
+       
+        <section id="hero" class="hero-bg text-neutral-900 h-[50vh] md:h-[70vh] flex items-center justify-center relative overflow-hidden">
+            <svg class="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <radialGradient id="hardwareGlow" cx="50%" cy="40%" r="70%" fx="50%" fy="40%">
+                        <stop offset="0%" stop-color="#fff" stop-opacity="0.7"/>
+                        <stop offset="80%" stop-color="#A0522D" stop-opacity="0.15"/>
+                        <stop offset="100%" stop-color="#4a382e" stop-opacity="0"/>
+                    </radialGradient>
+                    <linearGradient id="hardwareLine" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#A0522D" stop-opacity="0.7"/>
+                        <stop offset="100%" stop-color="#fff" stop-opacity="0.1"/>
+                    </linearGradient>
+                </defs>
+                <ellipse cx="400" cy="200" rx="320" ry="120" fill="url(#hardwareGlow)" filter="url(#blur1)">
+                    <animate attributeName="cx" values="400;1040;400" dur="12s" repeatCount="indefinite"/>
+                </ellipse>
+                <ellipse cx="1040" cy="400" rx="260" ry="100" fill="url(#hardwareGlow)" filter="url(#blur2)">
+                    <animate attributeName="cx" values="1040;400;1040" dur="14s" repeatCount="indefinite"/>
+                </ellipse>
+                <path d="M400 350 Q720 150 1040 350" stroke="url(#hardwareLine)" stroke-width="16" fill="none" filter="url(#blur3)">
+                    <animate attributeName="d" values="M400 350 Q720 150 1040 350;M400 370 Q720 120 1040 370;M400 350 Q720 150 1040 350" dur="8s" repeatCount="indefinite"/>
+                </path>
+                <filter id="blur1"><feGaussianBlur stdDeviation="60"/></filter>
+                <filter id="blur2"><feGaussianBlur stdDeviation="40"/></filter>
+                <filter id="blur3"><feGaussianBlur stdDeviation="2"/></filter>
+            </svg>
+            <div class="relative z-10 p-8 md:p-12 text-center flex flex-col items-center justify-center w-full">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4 flex flex-col items-center justify-center">
+                    <span>Crafting Quality Since 1980.</span>
+                    <span class="inline-flex items-center justify-center mt-2 accent-color">
+                        <svg class="w-12 h-12 animate-bounce" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 6 4 4 6.5 4c1.74 0 3.41 1.01 4.13 2.44h.74C14.09 5.01 15.76 4 17.5 4 20 4 22 6 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                        <span class="ml-2 text-2xl md:text-3xl font-bold animate-pulse">Trusted by 1000+ Projects</span>
+                    </span>
+                    <span>Uttam Hardware Fittings</span>
+                </h1>
+                <p class="text-lg md:text-xl text-neutral-700 mb-8">Your trusted partner for durable and versatile hardware fittings in Satara.</p>
+                <a href="tel:+918041014685" class="bg-accent-dark text-white text-lg px-8 py-3 rounded-full hover:bg-neutral-800 transition-all shadow-lg transform hover:scale-105 mt-6 inline-block">Enquire Now!</a>
+            </div>
+        </section>
+<hr style="height: 5px; border: none; background-color: #4a382e;">
+        <section id="shop-products" class="py-10 md:py-12 best-seller-bg" style="margin-bottom:0;">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-neutral-900 mb-2 tracking-tight">Best Sellers</h2>
+      <p class="text-lg text-neutral-700">Browse our bestsellers and essentials. Click any product to view details below.</p>
+    </div>
+    <div class="relative">
+      <button id="bestSellerLeft" class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-neutral-300 rounded-full shadow p-2 hover:bg-neutral-100 transition" aria-label="Scroll left">
+        <svg class="w-6 h-6 text-neutral-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+        </svg>
+      </button>
+      <div id="bestSellerScroll" class="flex overflow-x-auto gap-6 pb-2 scroll-smooth snap-x snap-mandatory">
+        <button onclick="document.getElementById('door-hinges').scrollIntoView({behavior:'smooth'});" class="min-w-[320px] max-w-xs w-full rounded-2xl bg-white shadow-lg flex flex-col p-5 transition-all duration-300 group hover:shadow-2xl focus:outline-none snap-start card-border" style="border-width:1px; border-radius: 20px;">
+          <div class="flex items-center justify-between mb-2">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full border border-neutral-200 text-neutral-400 bg-white">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 17.25l-6.172 3.858 1.179-6.873L2 9.885l6.914-1.004L12 2.5l3.086 6.381L22 9.885l-5.007 4.35 1.179 6.873z"/>
+              </svg>
+            </span>
+            <div class="flex space-x-1">
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-accent bg-accent/20 text-accent">BS</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-neutral-300 bg-neutral-100 text-neutral-600">ST</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-neutral-300 bg-neutral-100 text-neutral-600">DR</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center mb-3">
+            <img src="https://via.placeholder.com/150x150?text=Door+Hinges" alt="Door Hinges" class="object-contain w-32 h-32 mb-2 rounded-xl shadow-sm">
+            <div class="flex space-x-2">
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">A+</span>
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">V</span>
+            </div>
+          </div>
+          <div class="flex-1 flex flex-col">
+            <span class="block text-base font-bold text-neutral-900 leading-tight mb-1">Door Hinges, Steel, 4-inch</span>
+            <span class="flex items-center text-yellow-500 mb-1">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-gray-300" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <span class="text-xs text-neutral-500 ml-1">(75)</span>
+            </span>
+            <span class="block text-xs text-neutral-400">Price</span>
+            <span class="block text-lg font-bold text-price mb-1">₹150.00</span>
+          </div>
+        </button>
+        <button onclick="document.getElementById('cabinet-handles').scrollIntoView({behavior:'smooth'});" class="min-w-[320px] max-w-xs w-full rounded-2xl bg-white shadow-lg flex flex-col p-5 transition-all duration-300 group hover:shadow-2xl focus:outline-none snap-start card-border" style="border-width:1px; border-radius: 20px;">
+          <div class="flex items-center justify-between mb-2">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full border border-neutral-200 text-neutral-400 bg-white">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 17.25l-6.172 3.858 1.179-6.873L2 9.885l6.914-1.004L12 2.5l3.086 6.381L22 9.885l-5.007 4.35 1.179 6.873z"/>
+              </svg>
+            </span>
+            <div class="flex space-x-1">
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-accent bg-accent/20 text-accent">BS</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-neutral-300 bg-neutral-100 text-neutral-600">DE</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-neutral-300 bg-neutral-100 text-neutral-600">NF</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center mb-3">
+            <img src="https://via.placeholder.com/150x150?text=Cabinet+Handles" alt="Cabinet Handles & Knobs" class="object-contain w-32 h-32 mb-2 rounded-xl shadow-sm">
+            <div class="flex space-x-2">
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">B+</span>
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">V</span>
+            </div>
+          </div>
+          <div class="flex-1 flex flex-col">
+            <span class="block text-base font-bold text-neutral-900 leading-tight mb-1">Cabinet Handles, Chrome Finish</span>
+            <span class="flex items-center text-yellow-500 mb-1">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-gray-300" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <span class="text-xs text-neutral-500 ml-1">(68)</span>
+            </span>
+            <span class="block text-xs text-neutral-400">Price</span>
+            <span class="block text-lg font-bold text-price mb-1">₹80.00</span>
+          </div>
+        </button>
+        <button onclick="document.getElementById('screws-fasteners').scrollIntoView({behavior:'smooth'});" class="min-w-[320px] max-w-xs w-full rounded-2xl bg-white shadow-lg flex flex-col p-5 transition-all duration-300 group hover:shadow-2xl focus:outline-none snap-start card-border" style="border-width:1px; border-radius: 20px;">
+          <div class="flex items-center justify-between mb-2">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full border border-neutral-200 text-neutral-400 bg-white">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 17.25l-6.172 3.858 1.179-6.873L2 9.885l6.914-1.004L12 2.5l3.086 6.381L22 9.885l-5.007 4.35 1.179 6.873z"/>
+              </svg>
+            </span>
+            <div class="flex space-x-1">
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-accent bg-accent/20 text-accent">BS</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-neutral-300 bg-neutral-100 text-neutral-600">ST</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-neutral-300 bg-neutral-100 text-neutral-600">PR</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center mb-3">
+            <img src="https://via.placeholder.com/150x150?text=Screws+%26+Fasteners" alt="Screws & Fasteners" class="object-contain w-32 h-32 mb-2 rounded-xl shadow-sm">
+            <div class="flex space-x-2">
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">A+</span>
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">V</span>
+            </div>
+          </div>
+          <div class="flex-1 flex flex-col">
+            <span class="block text-base font-bold text-neutral-900 leading-tight mb-1">Wood Screws, Self-tapping</span>
+            <span class="flex items-center text-yellow-500 mb-1">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-gray-300" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <span class="text-xs text-neutral-500 ml-1">(59)</span>
+            </span>
+            <span class="block text-xs text-neutral-400">Price</span>
+            <span class="block text-lg font-bold text-price mb-1">₹0.50</span>
+          </div>
+        </button>
+        <button onclick="document.getElementById('door-locks').scrollIntoView({behavior:'smooth'});" class="min-w-[320px] max-w-xs w-full rounded-2xl bg-white shadow-lg flex flex-col p-5 transition-all duration-300 group hover:shadow-2xl focus:outline-none snap-start card-border" style="border-width:1px; border-radius: 20px;">
+          <div class="flex items-center justify-between mb-2">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full border border-neutral-200 text-neutral-400 bg-white">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 17.25l-6.172 3.858 1.179-6.873L2 9.885l6.914-1.004L12 2.5l3.086 6.381L22 9.885l-5.007 4.35 1.179 6.873z"/>
+              </svg>
+            </span>
+            <div class="flex space-x-1">
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-accent bg-accent/20 text-accent">BS</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-neutral-300 bg-neutral-100 text-neutral-600">SC</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-neutral-300 bg-neutral-100 text-neutral-600">NR</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center mb-3">
+            <img src="https://via.placeholder.com/150x150?text=Door+Locks" alt="Door Locks & Cylinders" class="object-contain w-32 h-32 mb-2 rounded-xl shadow-sm">
+            <div class="flex space-x-2">
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">A+</span>
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">V</span>
+            </div>
+          </div>
+          <div class="flex-1 flex flex-col">
+            <span class="block text-base font-bold text-neutral-900 leading-tight mb-1">Deadbolt Lock, Brass Finish</span>
+            <span class="flex items-center text-yellow-500 mb-1">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-gray-300" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <span class="text-xs text-neutral-500 ml-1">(42)</span>
+            </span>
+            <span class="block text-xs text-neutral-400">Price</span>
+            <span class="block text-lg font-bold text-price mb-1">₹1,200.00</span>
+          </div>
+        </button>
+        <button onclick="document.getElementById('window-latches').scrollIntoView({behavior:'smooth'});" class="min-w-[320px] max-w-xs w-full rounded-2xl bg-white shadow-lg flex flex-col p-5 transition-all duration-300 group hover:shadow-2xl focus:outline-none snap-start card-border" style="border-width:1px; border-radius: 20px;">
+          <div class="flex items-center justify-between mb-2">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full border border-neutral-200 text-neutral-400 bg-white">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 17.25l-6.172 3.858 1.179-6.873L2 9.885l6.914-1.004L12 2.5l3.086 6.381L22 9.885l-5.007 4.35 1.179 6.873z"/>
+            </svg>
+            </span>
+            <div class="flex space-x-1">
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-accent bg-accent/20 text-accent">BS</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-neutral-300 bg-neutral-100 text-neutral-600">OP</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-neutral-300 bg-neutral-100 text-neutral-600">SS</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center mb-3">
+            <img src="https://via.placeholder.com/150x150?text=Window+Latches" alt="Window Latches & Stays" class="object-contain w-32 h-32 mb-2 rounded-xl shadow-sm">
+            <div class="flex space-x-2">
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">B+</span>
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">V</span>
+            </div>
+          </div>
+          <div class="flex-1 flex flex-col">
+            <span class="block text-base font-bold text-neutral-900 leading-tight mb-1">Casement Stay, Aluminum</span>
+            <span class="flex items-center text-yellow-500 mb-1">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-gray-300" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <span class="text-xs text-neutral-500 ml-1">(34)</span>
+            </span>
+            <span class="block text-xs text-neutral-400">Price</span>
+            <span class="block text-lg font-bold text-price mb-1">₹200.00</span>
+          </div>
+        </button>
+        <button onclick="document.getElementById('drawer-slides').scrollIntoView({behavior:'smooth'});" class="min-w-[320px] max-w-xs w-full rounded-2xl bg-white shadow-lg flex flex-col p-5 transition-all duration-300 group hover:shadow-2xl focus:outline-none snap-start card-border" style="border-width:1px; border-radius: 20px;">
+          <div class="flex items-center justify-between mb-2">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full border border-neutral-200 text-neutral-400 bg-white">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 17.25l-6.172 3.858 1.179-6.873L2 9.885l6.914-1.004L12 2.5l3.086 6.381L22 9.885l-5.007 4.35 1.179 6.873z"/>
+              </svg>
+            </span>
+            <div class="flex space-x-1">
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-accent bg-accent/20 text-accent">BS</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-neutral-300 bg-neutral-100 text-neutral-600">SM</span>
+              <span class="px-2 py-0.5 rounded-lg text-xs font-semibold border border-neutral-300 bg-neutral-100 text-neutral-600">FS</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center mb-3">
+            <img src="https://via.placeholder.com/150x150?text=Drawer+Slides" alt="Drawer Slides & Channels" class="object-contain w-32 h-32 mb-2 rounded-xl shadow-sm">
+            <div class="flex space-x-2">
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">A+</span>
+              <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 flex items-center justify-center text-xs font-bold">V</span>
+            </div>
+          </div>
+          <div class="flex-1 flex flex-col">
+            <span class="block text-base font-bold text-neutral-900 leading-tight mb-1">Telescopic Drawer Slides, 16-inch</span>
+            <span class="flex items-center text-yellow-500 mb-1">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <svg class="w-4 h-4 fill-gray-300" viewBox="0 0 20 20"><polygon points="9.9,1.1 12.3,6.6 18.2,7.3 13.7,11.3 15,17.1 9.9,14.1 4.8,17.1 6.1,11.3 1.6,7.3 7.5,6.6 "/></svg>
+              <span class="text-xs text-neutral-500 ml-1">(28)</span>
+            </span>
+            <span class="block text-xs text-neutral-400">Price</span>
+            <span class="block text-lg font-bold text-price mb-1">₹450.00</span>
+          </div>
+        </button>
+      </div>
+      <button id="bestSellerRight" class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-neutral-300 rounded-full shadow p-2 hover:bg-neutral-100 transition" aria-label="Scroll right">
+        <svg class="w-6 h-6 text-neutral-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+<script>
+  // Simple horizontal scroll for best sellers
+  const scrollDiv = document.getElementById('bestSellerScroll');
+  const leftBtn = document.getElementById('bestSellerLeft');
+  const rightBtn = document.getElementById('bestSellerRight');
+  if (scrollDiv && leftBtn && rightBtn) {
+    leftBtn.style.display = 'flex';
+    rightBtn.style.display = 'flex';
+    leftBtn.onclick = () => scrollDiv.scrollBy({left: -340, behavior: 'smooth'});
+    rightBtn.onclick = () => scrollDiv.scrollBy({left: 340, behavior: 'smooth'});
+  }
+</script>
+
+<style>
+  #shop-products {
+    margin-bottom: 0 !important;
+    padding-bottom: 1.5rem !important;
+  }
+  #about {
+    margin-top: 0 !important;
+    padding-top: 1.5rem !important;
+  }
+  #products {
+    margin-top: 0 !important;
+    padding-top: 1.5rem !important;
+  }
+</style>
+<hr style="height: 4px; border: none; background-color: #4a382e;">
+<section id="about" class="py-4 md:py-6 bg-white">
+    <br>
+    <br>
+  <div class="container mx-auto px-2 flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-8">
+    <div class="flex-shrink-0 w-full md:w-1/3 flex justify-center md:justify-end mb-4 md:mb-0">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Engineering Icon" class="w-28 h-28 md:w-32 md:h-32 object-contain grayscale" loading="lazy">
+    </div>
+    <div class="w-full md:w-2/3 text-center md:text-left">
+      <div class="flex items-center justify-center md:justify-start mb-2">
+        <span class="inline-block bg-accent-dark text-white rounded-full px-3 py-1 text-xs font-semibold tracking-widest uppercase mr-2">About Us</span>
+        <span class="inline-block w-8 h-1 bg-neutral-300 rounded"></span>
+      </div>
+      <h2 class="text-2xl md:text-3xl font-bold text-neutral-900 mb-2 tracking-tight">Crafting Precision & Durability</h2>
+      <p class="text-base md:text-lg text-neutral-700 leading-snug mb-2">
+        At <span class="font-bold text-accent-dark">Uttam Hardware Fittings</span>, we don’t just supply fittings—we engineer <span class="text-accent-dark font-semibold">lasting solutions</span> for your projects and installations.
+      </p>
+      <ul class="text-neutral-700 text-sm md:text-base mb-2 space-y-1">
+        <li>• <span class="font-medium">Premium, ISI-certified materials</span> for every product</li>
+        <li>• <span class="font-medium">Precision engineering</span> for superior performance</li>
+        <li>• <span class="font-medium">Transparent, customer-first service</span> from inquiry to installation</li>
+      </ul>
+      <p class="text-neutral-600 text-xs md:text-sm mt-2">
+        Based in Satara, Maharashtra. Trusted by builders & businesses since 1980.
+      </p>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+</section>
+<hr style="height: 4px; border: none; background-color: #4a382e;">
+<section id="products" class="py-6 md:py-8 bg-white">
+  <div class="container mx-auto px-2">
+    <div class="text-center mb-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-neutral-900 mb-2">Our Hardware Solutions</h2>
+      <p class="text-base text-neutral-700">Durable. Reliable. Versatile. Explore our range of premium hardware fittings, engineered for lasting performance and seamless integration.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div id="door-hinges" class="bg-white rounded-xl shadow p-5 flex flex-col items-center card-border" style="border-width:1px;">
+        <img src="https://via.placeholder.com/150x150?text=Door+Hinges" alt="Door Hinges" class="w-32 h-32 object-contain mb-4 rounded">
+        <h3 class="font-bold text-lg text-neutral-900 mb-1">Door Hinges</h3>
+        <p class="text-neutral-700 text-sm mb-2 text-center">
+          <strong>Smooth Operation & Lasting Strength</strong><br>
+          Essential for seamless door function and structural integrity. Available in various materials and finishes for both residential and commercial applications.
+        </p>
+        <ul class="text-neutral-600 text-xs mb-2">
+          <li><strong>Types:</strong> Butt Hinges, Ball Bearing Hinges, Stainless Steel, Brass, Concealed</li>
+        </ul>
+        <div class="flex items-center justify-between w-full mt-2">
+          <span class="text-base font-bold text-price">₹150.00</span>
+          <a href="#" class="btn-primary px-4 py-2 rounded-full font-semibold transition">Learn More</a>
+        </div>
+      </div>
+      <div id="cabinet-handles" class="bg-white rounded-xl shadow p-5 flex flex-col items-center card-border" style="border-width:1px;">
+        <img src="https://via.placeholder.com/150x150?text=Cabinet+Handles" alt="Cabinet Handles & Knobs" class="w-32 h-32 object-contain mb-4 rounded">
+        <h3 class="font-bold text-lg text-neutral-900 mb-1">Cabinet Handles & Knobs</h3>
+        <p class="text-neutral-700 text-sm mb-2 text-center">
+          <strong>Stylish Accents & Functional Grip</strong><br>
+          Enhance the aesthetics and usability of your furniture with our diverse range of handles and knobs, from modern to classic designs.
+        </p>
+        <ul class="text-neutral-600 text-xs mb-2">
+          <li><strong>Types:</strong> D-Handles, Bar Handles, Pull Handles, Knobs, Chrome Finish, Antique Finish</li>
+        </ul>
+        <div class="flex items-center justify-between w-full mt-2">
+          <span class="text-base font-bold text-price">₹80.00</span>
+          <a href="#" class="btn-primary px-4 py-2 rounded-full font-semibold transition">Learn More</a>
+        </div>
+      </div>
+      <div id="screws-fasteners" class="bg-white rounded-xl shadow p-5 flex flex-col items-center card-border" style="border-width:1px;">
+        <img src="https://via.placeholder.com/150x150?text=Screws+%26+Fasteners" alt="Screws & Fasteners" class="w-32 h-32 object-contain mb-4 rounded">
+        <h3 class="font-bold text-lg text-neutral-900 mb-1">Screws & Fasteners</h3>
+        <p class="text-neutral-700 text-sm mb-2 text-center">
+          <strong>The Foundation of Strong Connections</strong><br>
+          The backbone of any robust assembly. Our fasteners offer superior grip and durability for every construction and installation need.
+        </p>
+        <ul class="text-neutral-600 text-xs mb-2">
+          <li><strong>Types:</strong> Wood Screws, Machine Screws, Self-Tapping Screws, Bolts, Nuts, Washers</li>
+        </ul>
+        <div class="flex items-center justify-between w-full mt-2">
+          <span class="text-base font-bold text-price">₹0.50</span>
+          <a href="#" class="btn-primary px-4 py-2 rounded-full font-semibold transition">Learn More</a>
+        </div>
+      </div>
+      <div id="door-locks" class="bg-white rounded-xl shadow p-5 flex flex-col items-center card-border" style="border-width:1px;">
+        <img src="https://via.placeholder.com/150x150?text=Door+Locks" alt="Door Locks & Cylinders" class="w-32 h-32 object-contain mb-4 rounded">
+        <h3 class="font-bold text-lg text-neutral-900 mb-1">Door Locks & Cylinders</h3>
+        <p class="text-neutral-700 text-sm mb-2 text-center">
+          <strong>Advanced Security & Peace of Mind</strong><br>
+          Secure your premises with our high-quality door locks and cylinders, designed for maximum security and ease of use.
+        </p>
+        <ul class="text-neutral-600 text-xs mb-2">
+          <li><strong>Types:</strong> Deadbolt Locks, Cylindrical Locks, Mortise Locks, Rim Locks, Padlocks</li>
+        </ul>
+        <div class="flex items-center justify-between w-full mt-2">
+          <span class="text-base font-bold text-price">₹1,200.00</span>
+          <a href="#" class="btn-primary px-4 py-2 rounded-full font-semibold transition">Learn More</a>
+        </div>
+      </div>
+      <div id="window-latches" class="bg-white rounded-xl shadow p-5 flex flex-col items-center card-border" style="border-width:1px;">
+        <img src="https://via.placeholder.com/150x150?text=Window+Latches" alt="Window Latches & Stays" class="w-32 h-32 object-contain mb-4 rounded">
+        <h3 class="font-bold text-lg text-neutral-900 mb-1">Window Latches & Stays</h3>
+        <p class="text-neutral-700 text-sm mb-2 text-center">
+          <strong>Secure Closure & Smooth Operation</strong><br>
+          Ensure the security and smooth operation of your windows with our range of durable latches and stays, suitable for various window types.
+        </p>
+        <ul class="text-neutral-600 text-xs mb-2">
+          <li><strong>Types:</strong> Casement Stays, Friction Hinges, Espagnolette Handles, Sash Fasteners</li>
+        </ul>
+        <div class="flex items-center justify-between w-full mt-2">
+          <span class="text-base font-bold text-price">₹200.00</span>
+          <a href="#" class="btn-primary px-4 py-2 rounded-full font-semibold transition">Learn More</a>
+        </div>
+      </div>
+      <div id="drawer-slides" class="bg-white rounded-xl shadow p-5 flex flex-col items-center card-border" style="border-width:1px;">
+        <img src="https://via.placeholder.com/150x150?text=Drawer+Slides" alt="Drawer Slides & Channels" class="w-32 h-32 object-contain mb-4 rounded">
+        <h3 class="font-bold text-lg text-neutral-900 mb-1">Drawer Slides & Channels</h3>
+        <p class="text-neutral-700 text-sm mb-2 text-center">
+          <strong>Effortless Motion & Reliable Support</strong><br>
+          Experience effortless drawer movement with our smooth and durable drawer slides and channels, available for all furniture applications.
+        </p>
+        <ul class="text-neutral-600 text-xs mb-2">
+          <li><strong>Types:</strong> Telescopic Slides, Roller Slides, Undermount Slides, Soft-Close, Push-to-Open</li>
+        </ul>
+        <div class="flex items-center justify-between w-full mt-2">
+          <span class="text-base font-bold text-price">₹450.00</span>
+          <a href="#" class="btn-primary px-4 py-2 rounded-full font-semibold transition">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section id="contact" class="py-7 md:py-9 bg-accent-dark text-white">
+            <div class="container mx-auto px-2 text-center">
+                   <h2 class="text-2xl md:text-3xl font-bold mb-2">Ready to Enhance Your Project?</h2>
+                   <p class="text-base text-neutral-300 mb-4">Contact us today for a free, no-obligation consultation and quote.</p>
+                   <div class="max-w-3xl mx-auto bg-neutral-50 text-neutral-800 rounded-md shadow p-4 grid md:grid-cols-3 gap-2 text-left">
+                       <div class="md:col-span-1">
+                            <h3 class="font-bold text-lg mb-2">Contact Details</h3>
+                            <p class="mb-2"><strong>Phone:</strong><br> <a href="tel:+918041014685" class="text-black hover:underline">+91 8041014685</a></p>
+                            <p class="mb-2"><strong>Email:</strong><br> <a href="mailto:contact@uttamhardware.example.com" class="text-black hover:underline">contact@uttamhardware.example.com</a></p>
+                            <p class="mb-2"><strong>Address:</strong><br> 123 Uttam Nagar, Satara, Maharashtra, India</p>
+                            <div class="flex space-x-4 mt-4 justify-center">
+                                <a href="https://www.facebook.com/uttamhardwarefittings" target="_blank" class="text-blue-600 hover:text-blue-800 transition">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2a6 6 0 00-6 6v4H8v4h4v10h4V16h4l2-4h-6V8a2 2 0 012-2h2V2h-2z"/></svg>
+                                </a>
+                                <a href="https://www.instagram.com/uttamhardwarefittings" target="_blank" class="text-pink-600 hover:text-pink-800 transition">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 00-8 0m8 0a6 6 0 018 0m-8 0v8m0 0a6 6 0 01-8 0m8 0V8z"/></svg>
+                                </a>
+                                <a href="https://wa.me/918041014685" target="_blank" class="text-green-600 hover:text-green-800 transition">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.0007 2.00065C6.48624 2.00065 2.00073 6.48616 2.00073 12.0007C2.00073 14.1207 2.68673 16.1207 3.84073 17.7407L2.00073 22.0007L6.26073 20.1607C7.88073 21.3147 9.88073 22.0007 12.0007 22.0007C17.5152 22.0007 22.0007 17.5152 22.0007 12.0007C22.0007 6.48616 17.5152 2.00065 12.0007 2.00065ZM16.6507 15.6007C16.4007 16.0507 15.1507 16.7007 14.9007 16.8507C14.6507 17.0007 14.4007 17.0007 13.9507 16.7507C13.5007 16.5007 12.0007 15.2507 10.5007 13.7507C9.00073 12.2507 8.00073 11.0007 7.75073 10.7507C7.50073 10.5007 7.35073 10.2507 7.60073 9.80073C7.85073 9.35073 8.10073 8.75073 8.25073 8.50073C8.40073 8.25073 8.50073 8.15073 8.65073 8.00073C8.80073 7.85073 8.95073 7.75073 9.20073 7.75073C9.45073 7.75073 9.60073 7.75073 9.75073 7.75073C9.90073 7.75073 10.1507 7.75073 10.4007 8.00073C10.6507 8.25073 10.9007 8.50073 11.1507 8.75073C11.4007 9.00073 11.6507 9.25073 11.9007 9.50073C12.1507 9.75073 12.4007 10.0007 12.6507 10.2507C12.9007 10.5007 13.1507 10.7507 13.4007 11.0007C13.6507 11.2507 13.9007 11.5007 14.1507 11.7507C14.4007 12.0007 14.6507 12.2507 14.9007 12.5007C15.1507 12.7507 15.4007 13.0007 15.6507 13.2507C15.9007 13.5007 16.1507 13.7507 16.4007 14.0007C16.6507 14.2507 16.9007 14.5007 16.6507 14.9507ZM16.6507 15.6007Z"/></svg>
+                                </a>
+                            </div>
+                       </div>
+                   </div>
+            </div>
+        </section>
+
+        <footer class="footer-bg text-white py-6">
+            <div class="container mx-auto px-4 text-center">
+                <p class="text-sm">&copy;2024 Uttam Hardware Fittings. All rights reserved.</p>
+                <div class="flex justify-center space-x-4 mt-2">
+                    <a href="#" class="text-white hover:text-orange-300 transition">We Build with Precision</a>
+                    <a href="#" class="text-white hover:text-orange-300 transition"></a>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
