@@ -61,6 +61,18 @@
             overflow: hidden; /* Prevent model overflow if not perfectly sized */
         }
 
+        @media (max-width: 640px) {
+          #hero .top-8 { top: 1.5rem !important; }
+          #hero .text-4xl, #hero .md\:text-5xl { font-size: 1.6rem !important; }
+          #hero .text-base, #hero .md\:text-lg { font-size: 1rem !important; }
+          #hero .px-7, #hero .px-4 { padding-left: 1rem !important; padding-right: 1rem !important; }
+          #shop-products .w-12, #shop-products .h-12 { width: 48px !important; height: 48px !important; }
+          #shop-products .min-w-\[110px\], #shop-products .max-w-\[120px\] { min-width: 90px !important; max-width: 100px !important; }
+          #shop-products .px-3 { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+          .container, .mx-auto { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+          section, .py-10, .py-12, .py-6, .py-8 { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+          .mb-6, .mb-8, .mb-4 { margin-bottom: 1rem !important; }
+        }
     </style>
 </head>
 <body class="text-neutral-800">
@@ -75,8 +87,11 @@
             </span>
         </div>
         <div class="hidden md:flex space-x-4 items-center">
-            <a href="tel:+918308443333" class="bg-black text-white px-4 py-2 rounded-full hover:bg-neutral-900 transition-all shadow">📞 Call Uttam</a>
-            <a href="tel:+919765633344" class="bg-black text-white px-4 py-2 rounded-full hover:bg-neutral-900 transition-all shadow">📞 Call Rohit</a>
+            <!-- Single Call Button -->
+            <button id="call-choice-btn" class="bg-black text-white px-4 py-2 rounded-full hover:bg-neutral-900 transition-all shadow font-semibold flex items-center">
+                📞 Call
+            </button>
+            <!-- WhatsApp Dropdown Button (unchanged) -->
             <div class="relative group">
                 <button class="bg-black text-white px-4 py-2 rounded-full hover:bg-neutral-900 transition-all shadow flex items-center">
                     💬 WhatsApp
@@ -88,13 +103,14 @@
                 </div>
             </div>
         </div>
+        <!-- Mobile menu button (unchanged) -->
         <button id="mobile-menu-button" class="md:hidden">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
         </button>
     </nav>
+    <!-- Mobile menu: Single Call button, shows choice modal -->
     <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 bg-white/95 backdrop-blur-md border-b border-black/10">
-        <a href="tel:+918308443333" class="block mt-2 bg-black text-white text-center px-4 py-2 rounded-full hover:bg-neutral-900 shadow">📞 Call Uttam</a>
-        <a href="tel:+919765633344" class="block mt-2 bg-black text-white text-center px-4 py-2 rounded-full hover:bg-neutral-900 shadow">📞 Call Rohit</a>
+        <button id="call-choice-btn-mobile" class="block mt-2 bg-black text-white text-center px-4 py-2 rounded-full hover:bg-neutral-900 shadow w-full font-semibold">📞 Call</button>
         <div class="relative group">
             <button class="w-full mt-2 bg-black text-white text-center px-4 py-2 rounded-full hover:bg-neutral-900 shadow flex items-center justify-center">
                 💬 WhatsApp
@@ -111,27 +127,28 @@
 
     <main>
        
-        <section id="hero" class="text-neutral-900 h-[50vh] md:h-[70vh] flex items-center justify-center relative overflow-hidden">
+        <section id="hero" class="text-neutral-900 min-h-[60vh] md:min-h-[70vh] flex items-center justify-center relative overflow-hidden">
             <!-- Video Background -->
-            <!-- HERO VIDEO -->
-<video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0" id="hero-bg-video">
-    <source src="Video_Ready_More_White.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0" id="hero-bg-video">
+                <source src="3dbackground.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <!-- Add a dark overlay for better contrast -->
             <div class="absolute inset-0 bg-black bg-opacity-30 z-0"></div>
-            <div class="absolute top-8 right-8 z-10 flex flex-col items-end max-w-md w-full">
-                <i class="text-lg md:text-xl font-medium text-white mb--200 italic"><b>“Rain may fall, winds may howl — but under our roof, you’ll always feel a little safer.”</i></b>
-            
-                <span class="block mt-6 text-4xl md:text-5xl font-extrabold tracking-widest uppercase text-white px-4 py-2 rounded text-right border border-black shadow-lg" style="font-family: 'Montserrat', 'Inter', Arial, sans-serif; letter-spacing: 0.1em;">
+            <div class="relative z-10 flex flex-col items-center justify-center w-full max-w-xl mx-auto px-2 py-6 text-center">
+                <i class="text-base md:text-lg font-medium text-white italic mb-2 block">“Rain may fall, winds may howl — but under our roof, you’ll always feel a little safer.”</i>
+                <span class="block mt-2 text-3xl md:text-5xl font-extrabold tracking-widest uppercase text-white px-4 py-2 rounded text-center border border-black shadow-lg"
+                      style="font-family: 'Montserrat', 'Inter', Arial, sans-serif; letter-spacing: 0.1em;">
                     Uttam Roofing Solutions
                 </span>
-                <p class="text-base md:text-lg text-neutral-200 mb-4 text-right drop-shadow"><br>
-                  <b><i>  #1 Roofing Material Supplier in Satara. <br> </i> 
-                    Visit Now!</b>
+                <p class="text-base md:text-lg text-neutral-200 mt-2 mb-4 text-center drop-shadow">
+                    <b><i>#1 Roofing Material Supplier in Satara.<br>Visit Now!</i></b>
                 </p>
-                <a href="https://wa.me/918308443333?text=Hey%2C%20I%20am%20interested%20in%20your%20products%2C%20kindly%20revert%20back%20and%20we%20can%20discuss
-" class="bg-white text-black text-lg px-7 py-2 rounded-full hover:bg-neutral-200 transition-all shadow-lg transform hover:scale-105 mt-2 inline-block font-semibold">Enquire Now!</a>
+                <a href="https://wa.me/918308443333?text=Hey%2C%20I%20am%20interested%20in%20your%20products%2C%20kindly%20revert%20back%20and%20we%20can%20discuss"
+                   class="bg-white text-black text-base md:text-lg px-5 py-2 md:px-7 md:py-3 rounded-full hover:bg-neutral-200 transition-all shadow-lg transform hover:scale-105 mt-2 inline-block font-semibold w-full max-w-xs text-center"
+                   style="margin-bottom:0.5rem;">
+                    Enquire Now!
+                </a>
             </div>
         </section>
 <hr style="height: 5px; border: none; background-color: black;">
@@ -175,13 +192,13 @@
         We Serve You With –
       </span>
     </h2>
-    <div class="flex flex-row justify-center items-center gap-2 md:gap-4 overflow-x-auto pb-2">
+    <div class="flex flex-row justify-center items-center gap-2 md:gap-4 overflow-x-auto pb-2 px-2 snap-x snap-mandatory">
       <!-- Card 1 -->
-      <a href="#polycarbonate-sheets" class="group flex flex-col items-center bg-white rounded-xl shadow px-3 py-5 min-w-[110px] max-w-[120px] w-full transition hover:shadow-2xl hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-black cursor-pointer border border-neutral-200 hover:border-black">
-        <div class="w-12 h-12 mb-1 flex items-center justify-center relative">
+      <a href="#polycarbonate-sheets" class="group flex flex-col items-center bg-white rounded-xl shadow px-3 py-5 min-w-[110px] max-w-[120px] w-full transition hover:shadow-2xl hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-black cursor-pointer border border-neutral-200 hover:border-black snap-center">
+        <div class="w-14 h-14 mb-1 flex items-center justify-center relative">
           <!-- SHOP OUR BEST SELLERS SECTION (product cards) -->
 <!-- Card 1 -->
-<img src="roofingicon.png" alt="Polycarbonate Sheets" class="w-10 h-10 object-contain transition-transform duration-300 group-hover:scale-110" />
+<img src="roofingicon.png" alt="Polycarbonate Sheets" class="w-12 h-12 object-contain transition-transform duration-300 group-hover:scale-110" />
           <span class="absolute -top-2 -right-2 bg-black text-white text-[10px] px-2 py-[2px] rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow">Top</span>
         </div>
         <span class="text-sm font-semibold text-neutral-900 text-center leading-tight mt-1 group-hover:underline">Polycarbonate<br>Sheets</span>
@@ -452,5 +469,86 @@
     </div>
 </footer>
     </main>
+
+    <!-- 3. CALL CHOICE MODAL (for both desktop and mobile) -->
+<div id="call-choice-modal" class="fixed inset-0 z-[9999] bg-black bg-opacity-40 flex items-center justify-center hidden">
+    <div class="bg-white rounded-xl shadow-lg p-6 min-w-[220px] flex flex-col items-center">
+        <h3 class="text-lg font-bold mb-4 text-center">Call Who?</h3>
+        <a href="tel:+918308443333" class="block w-full mb-2 px-4 py-2 rounded bg-black text-white text-center font-semibold hover:bg-neutral-800 transition">Uttam Mutha<br><span class="text-xs font-normal">+91 8308443333</span></a>
+        <a href="tel:+919765633344" class="block w-full mb-2 px-4 py-2 rounded bg-black text-white text-center font-semibold hover:bg-neutral-800 transition">Rohit Mutha<br><span class="text-xs font-normal">+91 9765633444</span></a>
+        <button onclick="document.getElementById('call-choice-modal').classList.add('hidden')" class="mt-2 text-black underline text-sm">Cancel</button>
+    </div>
+</div>
+
+<!-- Mobile Fixed Action Bar for Call & WhatsApp -->
+<style>
+@media (max-width: 768px) {
+  #mobile-action-bar {
+    display: flex;
+  }
+}
+@media (min-width: 769px) {
+  #mobile-action-bar {
+    display: none;
+  }
+}
+#mobile-action-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 9999;
+  background: rgba(255,255,255,0.98);
+  box-shadow: 0 -2px 12px #0002;
+  border-top: 1.5px solid #e5e7eb;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 0;
+  gap: 1rem;
+}
+#mobile-action-bar a, #mobile-action-bar button {
+  flex: 1 1 0;
+  margin: 0 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.7rem 0.5rem;
+  text-align: center;
+  background: #111;
+  color: #fff;
+  border: none;
+  box-shadow: 0 2px 8px #0001;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+#mobile-action-bar a:hover, #mobile-action-bar button:hover {
+  background: #0ea5e9;
+  color: #fff;
+}
+</style>
+<div id="mobile-action-bar">
+  <button onclick="document.getElementById('call-choice-modal').classList.remove('hidden')">
+    📞 Call
+  </button>
+  <a href="https://wa.me/918308443333?text=Hey%2C%20I%20am%20interested%20in%20your%20products%2C%20kindly%20revert%20back%20and%20we%20can%20discuss" target="_blank">
+    💬 WhatsApp
+  </a>
+</div>
+
+<script>
+  // Show call choice modal on both desktop and mobile call buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    function showCallModal() {
+      document.getElementById('call-choice-modal').classList.remove('hidden');
+    }
+    var callBtn = document.getElementById('call-choice-btn');
+    if (callBtn) callBtn.onclick = showCallModal;
+    var callBtnMobile = document.getElementById('call-choice-btn-mobile');
+    if (callBtnMobile) callBtnMobile.onclick = showCallModal;
+  });
+</script>
 </body>
 </html>
